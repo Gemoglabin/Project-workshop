@@ -124,8 +124,6 @@ namespace Zurnal
                     dataGridView6.Rows.Add(couple_name_and_group);
                 }
 
-
-
             }
             Templates.Clear();
         }
