@@ -125,6 +125,7 @@ namespace Zurnal
                 }
 
 
+
             }
             Templates.Clear();
         }
