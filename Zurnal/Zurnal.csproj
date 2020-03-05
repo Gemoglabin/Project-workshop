@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>.\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -35,19 +35,19 @@
   <ItemGroup>
     <Reference Include="Devart.Data, Version=5.0.818.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Devart.Data.dll</HintPath>
+      <HintPath>.\Devart.Data.dll</HintPath>
     </Reference>
     <Reference Include="Devart.Data.Linq, Version=4.4.364.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Devart.Data.Linq.dll</HintPath>
+      <HintPath>.\Devart.Data.Linq.dll</HintPath>
     </Reference>
     <Reference Include="Devart.Data.SQLite, Version=5.1.26.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Devart.Data.SQLite.dll</HintPath>
+      <HintPath>.\Devart.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="Devart.Data.SQLite.Linq, Version=4.4.364.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Devart.Data.SQLite.Linq.dll</HintPath>
+      <HintPath>.\Devart.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
