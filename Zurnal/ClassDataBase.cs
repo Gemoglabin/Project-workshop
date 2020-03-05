@@ -5,7 +5,7 @@ using System.Text;
 using System.Data;
 using Devart.Data.SQLite;
 
-namespace CourceWork
+namespace Zurnal
 {
     public class ClassDataBase
     {
