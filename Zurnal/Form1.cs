@@ -132,5 +132,17 @@ namespace Zurnal
         {
 
         }
+
+        private void siguiruhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Zvit garant = new Zvit();
+            garant.Show();
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 } 
