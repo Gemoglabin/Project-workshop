@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Zurnal 
-{//Я ТЕСТИРУЮ 957
+namespace Zurnal
+{//
     public partial class Form1 : Form
     {
         public Form1()
@@ -18,6 +18,7 @@ namespace Zurnal
         }
 
         public List<Template> Templates = new List<Template>();
+        public List<Student> Students = new List<Student>();
 
         ClassDataBase db = new ClassDataBase();
 
@@ -33,11 +34,11 @@ namespace Zurnal
 
                 if (couple_name_and_group == "  ")
                 {
-                    dataGridView2.Rows.Add("Окно");
+                    dataGridView1.Rows.Add("Окно");
                 }
                 else
                 {
-                    dataGridView2.Rows.Add(couple_name_and_group);
+                    dataGridView1.Rows.Add(couple_name_and_group);
                 }
 
             }
@@ -45,6 +46,27 @@ namespace Zurnal
             Templates.Clear();
 
             s = @"SELECT * from template where week_day='ВТ';";
+            db.Execute<Template>("testir.db", s, ref Templates);
+            for (int i = 0; i < 5; i++)
+            {
+
+
+                string couple_name_and_group = Convert.ToString(Templates[i].name_gr) + "  " + Convert.ToString(Templates[i].name_couple);
+
+                if (couple_name_and_group == "  ")
+                {
+                    dataGridView2.Rows.Add("Окно");
+                }
+                else
+                {
+                    dataGridView2.Rows.Add(couple_name_and_group);
+                }
+
+
+            }
+            Templates.Clear();
+
+            s = @"SELECT * from template where week_day='СР';";
             db.Execute<Template>("testir.db", s, ref Templates);
             for (int i = 0; i < 5; i++)
             {
@@ -65,7 +87,7 @@ namespace Zurnal
             }
             Templates.Clear();
 
-            s = @"SELECT * from template where week_day='СР';";
+            s = @"SELECT * from template where week_day='ЧТ';";
             db.Execute<Template>("testir.db", s, ref Templates);
             for (int i = 0; i < 5; i++)
             {
@@ -86,7 +108,7 @@ namespace Zurnal
             }
             Templates.Clear();
 
-            s = @"SELECT * from template where week_day='ЧТ';";
+            s = @"SELECT * from template where week_day='ПТ';";
             db.Execute<Template>("testir.db", s, ref Templates);
             for (int i = 0; i < 5; i++)
             {
@@ -103,34 +125,8 @@ namespace Zurnal
                     dataGridView5.Rows.Add(couple_name_and_group);
                 }
 
-
             }
             Templates.Clear();
-
-            s = @"SELECT * from template where week_day='ПТ';";
-            db.Execute<Template>("testir.db", s, ref Templates);
-            for (int i = 0; i < 5; i++)
-            {
-
-
-                string couple_name_and_group = Convert.ToString(Templates[i].name_gr) + "  " + Convert.ToString(Templates[i].name_couple);
-
-                if (couple_name_and_group == "  ")
-                {
-                    dataGridView6.Rows.Add("Окно");
-                }
-                else
-                {
-                    dataGridView6.Rows.Add(couple_name_and_group);
-                }
-
-            }
-            Templates.Clear();
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void siguiruhToolStripMenuItem_Click(object sender, EventArgs e)
@@ -143,6 +139,81 @@ namespace Zurnal
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            string d = dataGridView1.CurrentCell.Value.ToString();
+            string s = @"SELECT * FROM template WHERE week_day = 'ПН';";
+            db.Execute<Template>("testir.db", s, ref Templates);
+            textBox1.Text = Templates[dataGridView1.CurrentRow.Index].name_gr;
+            textBox2.Text = Templates[dataGridView1.CurrentRow.Index].name_couple;
+            Form2 f = new Form2();
+            f.textBox1.Text = Templates[dataGridView1.CurrentRow.Index].name_gr;
+            f.textBox2.Text = Templates[dataGridView1.CurrentRow.Index].name_couple;
+            f.ShowDialog();
+            Templates.Clear();
+        }
+
+        private void dataGridView2_DoubleClick(object sender, EventArgs e)
+        {
+            string d = dataGridView2.CurrentCell.Value.ToString();
+            string s = @"SELECT * FROM template WHERE week_day = 'ВТ';";
+            db.Execute<Template>("testir.db", s, ref Templates);
+            textBox1.Text = Templates[dataGridView2.CurrentRow.Index].name_gr;
+            textBox2.Text = Templates[dataGridView2.CurrentRow.Index].name_couple;
+            Form2 f = new Form2();
+            f.textBox1.Text = Templates[dataGridView2.CurrentRow.Index].name_gr;
+            f.textBox2.Text = Templates[dataGridView2.CurrentRow.Index].name_couple;
+            f.ShowDialog();
+            Templates.Clear();
+        }
+
+        private void dataGridView3_DoubleClick(object sender, EventArgs e)
+        {
+            string d = dataGridView3.CurrentCell.Value.ToString();
+            string s = @"SELECT * FROM template WHERE week_day = 'СР';";
+            db.Execute<Template>("testir.db", s, ref Templates);
+            textBox1.Text = Templates[dataGridView3.CurrentRow.Index].name_gr;
+            textBox2.Text = Templates[dataGridView3.CurrentRow.Index].name_couple;
+            Form2 f = new Form2();
+            f.textBox1.Text = Templates[dataGridView3.CurrentRow.Index].name_gr;
+            f.textBox2.Text = Templates[dataGridView3.CurrentRow.Index].name_couple;
+            f.ShowDialog();
+            Templates.Clear();
+        }
+
+        private void dataGridView4_DoubleClick(object sender, EventArgs e)
+        {
+            string d = dataGridView4.CurrentCell.Value.ToString();
+            string s = @"SELECT * FROM template WHERE week_day = 'ЧТ';";
+            db.Execute<Template>("testir.db", s, ref Templates);
+            textBox1.Text = Templates[dataGridView4.CurrentRow.Index].name_gr;
+            textBox2.Text = Templates[dataGridView4.CurrentRow.Index].name_couple;
+            Form2 f = new Form2();
+            f.textBox1.Text = Templates[dataGridView4.CurrentRow.Index].name_gr;
+            f.textBox2.Text = Templates[dataGridView4.CurrentRow.Index].name_couple;
+            f.ShowDialog();
+            Templates.Clear();
+        }
+
+        private void dataGridView5_DoubleClick(object sender, EventArgs e)
+        {
+            string d = dataGridView5.CurrentCell.Value.ToString();
+            string s = @"SELECT * FROM template WHERE week_day = 'ПТ';";
+            db.Execute<Template>("testir.db", s, ref Templates);
+            textBox1.Text = Templates[dataGridView5.CurrentRow.Index].name_gr;
+            textBox2.Text = Templates[dataGridView5.CurrentRow.Index].name_couple;
+            Form2 f = new Form2();
+            f.textBox1.Text = Templates[dataGridView5.CurrentRow.Index].name_gr;
+            f.textBox2.Text = Templates[dataGridView5.CurrentRow.Index].name_couple;
+            f.ShowDialog();
+            Templates.Clear();
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 } 
