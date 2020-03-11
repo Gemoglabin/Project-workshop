@@ -215,5 +215,10 @@ namespace Zurnal
         {
 
         }
+
+        private void jafhefuaegToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 } 
