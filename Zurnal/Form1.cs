@@ -215,5 +215,12 @@ namespace Zurnal
         {
 
         }
+
+        private void jafhefuaegToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Zvit garant = new Zvit();
+            garant.Show();
+        }
     }
 } 

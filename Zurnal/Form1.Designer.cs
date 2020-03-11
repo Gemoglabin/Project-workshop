@@ -28,214 +28,205 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.components = new System.ComponentModel.Container();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.dataGridView2 = new System.Windows.Forms.DataGridView();
-			this.dataGridView3 = new System.Windows.Forms.DataGridView();
-			this.dataGridView4 = new System.Windows.Forms.DataGridView();
-			this.dataGridView5 = new System.Windows.Forms.DataGridView();
-			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-			this.jafhefuaegToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.siguiruhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.zdcjhdsguygsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-			this.menuStrip1.SuspendLayout();
-			this.SuspendLayout();
-			// 
-			// dataGridView1
-			// 
-			this.dataGridView1.AllowUserToAddRows = false;
-			this.dataGridView1.AllowUserToDeleteRows = false;
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.components = new System.ComponentModel.Container();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.jafhefuaegToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zdcjhdsguygsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Mon});
-			this.dataGridView1.Location = new System.Drawing.Point(55, 49);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(143, 215);
-			this.dataGridView1.TabIndex = 1;
-			this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
-			// 
-			// dataGridView2
-			// 
-			this.dataGridView2.AllowUserToAddRows = false;
-			this.dataGridView2.AllowUserToDeleteRows = false;
-			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView1.Location = new System.Drawing.Point(55, 49);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(143, 215);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // Mon
+            // 
+            this.Mon.HeaderText = "Понеділок";
+            this.Mon.Name = "Mon";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
-			this.dataGridView2.Location = new System.Drawing.Point(204, 49);
-			this.dataGridView2.Name = "dataGridView2";
-			this.dataGridView2.Size = new System.Drawing.Size(143, 215);
-			this.dataGridView2.TabIndex = 2;
-			this.dataGridView2.DoubleClick += new System.EventHandler(this.dataGridView2_DoubleClick);
-			// 
-			// dataGridView3
-			// 
-			this.dataGridView3.AllowUserToAddRows = false;
-			this.dataGridView3.AllowUserToDeleteRows = false;
-			this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView2.Location = new System.Drawing.Point(204, 49);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(143, 215);
+            this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.DoubleClick += new System.EventHandler(this.dataGridView2_DoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Вівторок";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2});
-			this.dataGridView3.Location = new System.Drawing.Point(353, 49);
-			this.dataGridView3.Name = "dataGridView3";
-			this.dataGridView3.Size = new System.Drawing.Size(143, 215);
-			this.dataGridView3.TabIndex = 3;
-			this.dataGridView3.DoubleClick += new System.EventHandler(this.dataGridView3_DoubleClick);
-			// 
-			// dataGridView4
-			// 
-			this.dataGridView4.AllowUserToAddRows = false;
-			this.dataGridView4.AllowUserToDeleteRows = false;
-			this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView3.Location = new System.Drawing.Point(353, 49);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(143, 215);
+            this.dataGridView3.TabIndex = 3;
+            this.dataGridView3.DoubleClick += new System.EventHandler(this.dataGridView3_DoubleClick);
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Середа";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3});
-			this.dataGridView4.Location = new System.Drawing.Point(502, 49);
-			this.dataGridView4.Name = "dataGridView4";
-			this.dataGridView4.Size = new System.Drawing.Size(143, 215);
-			this.dataGridView4.TabIndex = 4;
-			this.dataGridView4.DoubleClick += new System.EventHandler(this.dataGridView4_DoubleClick);
-			// 
-			// dataGridView5
-			// 
-			this.dataGridView5.AllowUserToAddRows = false;
-			this.dataGridView5.AllowUserToDeleteRows = false;
-			this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView4.Location = new System.Drawing.Point(502, 49);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(143, 215);
+            this.dataGridView4.TabIndex = 4;
+            this.dataGridView4.DoubleClick += new System.EventHandler(this.dataGridView4_DoubleClick);
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Четвер";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4});
-			this.dataGridView5.Location = new System.Drawing.Point(651, 49);
-			this.dataGridView5.Name = "dataGridView5";
-			this.dataGridView5.Size = new System.Drawing.Size(143, 215);
-			this.dataGridView5.TabIndex = 5;
-			this.dataGridView5.DoubleClick += new System.EventHandler(this.dataGridView5_DoubleClick);
-			// 
-			// menuStrip1
-			// 
-			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dataGridView5.Location = new System.Drawing.Point(651, 49);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.Size = new System.Drawing.Size(143, 215);
+            this.dataGridView5.TabIndex = 5;
+            this.dataGridView5.DoubleClick += new System.EventHandler(this.dataGridView5_DoubleClick);
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "П\'ятниця";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jafhefuaegToolStripMenuItem,
             this.zdcjhdsguygsToolStripMenuItem,
             this.выходToolStripMenuItem});
-			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(849, 24);
-			this.menuStrip1.TabIndex = 6;
-			this.menuStrip1.Text = "menuStrip1";
-			// 
-			// jafhefuaegToolStripMenuItem
-			// 
-			this.jafhefuaegToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.siguiruhToolStripMenuItem});
-			this.jafhefuaegToolStripMenuItem.Name = "jafhefuaegToolStripMenuItem";
-			this.jafhefuaegToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-			this.jafhefuaegToolStripMenuItem.Text = "Звіт";
-			// 
-			// siguiruhToolStripMenuItem
-			// 
-			this.siguiruhToolStripMenuItem.Name = "siguiruhToolStripMenuItem";
-			this.siguiruhToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-			this.siguiruhToolStripMenuItem.Text = "Оформити звіт";
-			this.siguiruhToolStripMenuItem.Click += new System.EventHandler(this.siguiruhToolStripMenuItem_Click);
-			// 
-			// zdcjhdsguygsToolStripMenuItem
-			// 
-			this.zdcjhdsguygsToolStripMenuItem.Name = "zdcjhdsguygsToolStripMenuItem";
-			this.zdcjhdsguygsToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
-			this.zdcjhdsguygsToolStripMenuItem.Text = "Група";
-			// 
-			// выходToolStripMenuItem
-			// 
-			this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-			this.выходToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-			this.выходToolStripMenuItem.Text = "Вихід";
-			this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
-			// 
-			// textBox1
-			// 
-			this.textBox1.Location = new System.Drawing.Point(800, 176);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(100, 20);
-			this.textBox1.TabIndex = 7;
-			this.textBox1.Visible = false;
-			// 
-			// textBox2
-			// 
-			this.textBox2.Location = new System.Drawing.Point(800, 202);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(100, 20);
-			this.textBox2.TabIndex = 8;
-			this.textBox2.Visible = false;
-			// 
-			// contextMenuStrip1
-			// 
-			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-			this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
-			// 
-			// Mon
-			// 
-			this.Mon.HeaderText = "Понеділок";
-			this.Mon.Name = "Mon";
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.HeaderText = "Вівторок";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this.dataGridViewTextBoxColumn2.HeaderText = "Середа";
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			// 
-			// dataGridViewTextBoxColumn3
-			// 
-			this.dataGridViewTextBoxColumn3.HeaderText = "Четвер";
-			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-			// 
-			// dataGridViewTextBoxColumn4
-			// 
-			this.dataGridViewTextBoxColumn4.HeaderText = "П\'ятниця";
-			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-			// 
-			// Form1
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(849, 312);
-			this.ControlBox = false;
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.textBox1);
-			this.Controls.Add(this.dataGridView5);
-			this.Controls.Add(this.dataGridView4);
-			this.Controls.Add(this.dataGridView3);
-			this.Controls.Add(this.dataGridView2);
-			this.Controls.Add(this.dataGridView1);
-			this.Controls.Add(this.menuStrip1);
-			this.MainMenuStrip = this.menuStrip1;
-			this.Margin = new System.Windows.Forms.Padding(2);
-			this.Name = "Form1";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Розклад";
-			this.Load += new System.EventHandler(this.Form1_Load);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-			this.menuStrip1.ResumeLayout(false);
-			this.menuStrip1.PerformLayout();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(849, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // jafhefuaegToolStripMenuItem
+            // 
+            this.jafhefuaegToolStripMenuItem.Name = "jafhefuaegToolStripMenuItem";
+            this.jafhefuaegToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.jafhefuaegToolStripMenuItem.Text = "Звіт";
+            this.jafhefuaegToolStripMenuItem.Click += new System.EventHandler(this.jafhefuaegToolStripMenuItem_Click);
+            // 
+            // zdcjhdsguygsToolStripMenuItem
+            // 
+            this.zdcjhdsguygsToolStripMenuItem.Name = "zdcjhdsguygsToolStripMenuItem";
+            this.zdcjhdsguygsToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.zdcjhdsguygsToolStripMenuItem.Text = "Група";
+            // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.выходToolStripMenuItem.Text = "Вихід";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(800, 176);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(800, 202);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 8;
+            this.textBox2.Visible = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(849, 312);
+            this.ControlBox = false;
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dataGridView5);
+            this.Controls.Add(this.dataGridView4);
+            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Розклад";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -248,7 +239,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem jafhefuaegToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zdcjhdsguygsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem siguiruhToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
