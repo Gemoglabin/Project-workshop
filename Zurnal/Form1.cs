@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Zurnal  //это журнал
-{
+namespace Zurnal
+{//
     public partial class Form1 : Form
     {
         public Form1()
@@ -212,11 +212,6 @@ namespace Zurnal  //это журнал
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
