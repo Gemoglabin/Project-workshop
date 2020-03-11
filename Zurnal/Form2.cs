@@ -59,5 +59,16 @@ namespace Zurnal
             InputGroup();
             InputCouple();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            
+            Attendance f = new Attendance();
+            f.textBox1.Text = textBox1.Text;
+            f.textBox2.Text = textBox2.Text;
+            f.ShowDialog();
+            Templates.Clear();
+        }
     }
 }
