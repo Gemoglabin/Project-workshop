@@ -41,6 +41,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.jafhefuaegToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.siguiruhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zdcjhdsguygsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -155,13 +156,22 @@
             this.menuStrip1.Size = new System.Drawing.Size(849, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // jafhefuaegToolStripMenuItem
             // 
+            this.jafhefuaegToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.siguiruhToolStripMenuItem});
             this.jafhefuaegToolStripMenuItem.Name = "jafhefuaegToolStripMenuItem";
             this.jafhefuaegToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.jafhefuaegToolStripMenuItem.Text = "Звіт";
-            this.jafhefuaegToolStripMenuItem.Click += new System.EventHandler(this.jafhefuaegToolStripMenuItem_Click);
+            // 
+            // siguiruhToolStripMenuItem
+            // 
+            this.siguiruhToolStripMenuItem.Name = "siguiruhToolStripMenuItem";
+            this.siguiruhToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.siguiruhToolStripMenuItem.Text = "Оформити звіт";
+            this.siguiruhToolStripMenuItem.Click += new System.EventHandler(this.siguiruhToolStripMenuItem_Click);
             // 
             // zdcjhdsguygsToolStripMenuItem
             // 
@@ -239,6 +249,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem jafhefuaegToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zdcjhdsguygsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem siguiruhToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
