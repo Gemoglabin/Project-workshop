@@ -46,5 +46,12 @@ namespace Zurnal
 		{
 
 		}
-	}
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 boun = new Form1();
+            boun.Show();
+        }
+    }
 }

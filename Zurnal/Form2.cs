@@ -70,5 +70,10 @@ namespace Zurnal
             f.ShowDialog();
             Templates.Clear();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

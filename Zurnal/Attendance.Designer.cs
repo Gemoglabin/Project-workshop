@@ -30,10 +30,11 @@
 		{
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +61,21 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "П.І.Б. студента";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Присутність на парі";
+            this.Column2.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2"});
+            this.Column2.Name = "Column2";
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(773, 281);
@@ -76,26 +92,25 @@
             this.textBox2.TabIndex = 3;
             this.textBox2.Visible = false;
             // 
-            // Column1
+            // btnback
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "П.І.Б. студента";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Присутність на парі";
-            this.Column2.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2"});
-            this.Column2.Name = "Column2";
+            this.btnback.BackColor = System.Drawing.Color.Transparent;
+            this.btnback.BackgroundImage = global::Zurnal.Properties.Resources.back_5271;
+            this.btnback.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnback.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnback.Location = new System.Drawing.Point(12, 12);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(40, 38);
+            this.btnback.TabIndex = 4;
+            this.btnback.UseVisualStyleBackColor = false;
+            this.btnback.Click += new System.EventHandler(this.button1_Click);
             // 
             // Attendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 495);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
@@ -117,5 +132,6 @@
         public System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column2;
+        private System.Windows.Forms.Button btnback;
     }
 }

@@ -220,5 +220,15 @@ namespace Zurnal  //это журнал
         {
 
         }
+
+        private void zdcjhdsguygsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jafhefuaegToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 } 

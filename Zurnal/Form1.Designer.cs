@@ -165,11 +165,12 @@
             this.jafhefuaegToolStripMenuItem.Name = "jafhefuaegToolStripMenuItem";
             this.jafhefuaegToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.jafhefuaegToolStripMenuItem.Text = "Звіт";
+            this.jafhefuaegToolStripMenuItem.Click += new System.EventHandler(this.jafhefuaegToolStripMenuItem_Click);
             // 
             // siguiruhToolStripMenuItem
             // 
             this.siguiruhToolStripMenuItem.Name = "siguiruhToolStripMenuItem";
-            this.siguiruhToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.siguiruhToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.siguiruhToolStripMenuItem.Text = "Оформити звіт";
             this.siguiruhToolStripMenuItem.Click += new System.EventHandler(this.siguiruhToolStripMenuItem_Click);
             // 
@@ -178,11 +179,12 @@
             this.zdcjhdsguygsToolStripMenuItem.Name = "zdcjhdsguygsToolStripMenuItem";
             this.zdcjhdsguygsToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.zdcjhdsguygsToolStripMenuItem.Text = "Група";
+            this.zdcjhdsguygsToolStripMenuItem.Click += new System.EventHandler(this.zdcjhdsguygsToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.выходToolStripMenuItem.Text = "Вихід";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
@@ -259,6 +261,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-	}
+    }
 }
 
