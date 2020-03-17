@@ -40,6 +40,11 @@ namespace Zurnal
 			//{
 			//	Column2.Items.Add(j);
 			//}
+
+			DateTime date1 = new DateTime();
+			date1 = DateTime.Today;
+			label1.Text = Convert.ToString(date1.ToShortDateString());
+			
 		}
 
 		private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
