@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Zurnal
-{//
+{
     public partial class Form1 : Form
     {
         public Form1()
@@ -49,8 +49,6 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             for (int i = 0; i < 5; i++)
             {
-
-
                 string couple_name_and_group = Convert.ToString(Templates[i].name_gr) + "  " + Convert.ToString(Templates[i].name_couple);
 
                 if (couple_name_and_group == "  ")
@@ -61,8 +59,6 @@ namespace Zurnal
                 {
                     dataGridView2.Rows.Add(couple_name_and_group);
                 }
-
-
             }
             Templates.Clear();
 
@@ -70,8 +66,6 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             for (int i = 0; i < 5; i++)
             {
-
-
                 string couple_name_and_group = Convert.ToString(Templates[i].name_gr) + "  " + Convert.ToString(Templates[i].name_couple);
 
                 if (couple_name_and_group == "  ")
@@ -82,8 +76,6 @@ namespace Zurnal
                 {
                     dataGridView3.Rows.Add(couple_name_and_group);
                 }
-
-
             }
             Templates.Clear();
 
@@ -91,8 +83,6 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             for (int i = 0; i < 5; i++)
             {
-
-
                 string couple_name_and_group = Convert.ToString(Templates[i].name_gr) + "  " + Convert.ToString(Templates[i].name_couple);
 
                 if (couple_name_and_group == "  ")
@@ -103,8 +93,6 @@ namespace Zurnal
                 {
                     dataGridView4.Rows.Add(couple_name_and_group);
                 }
-
-
             }
             Templates.Clear();
 
@@ -112,8 +100,6 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             for (int i = 0; i < 5; i++)
             {
-
-
                 string couple_name_and_group = Convert.ToString(Templates[i].name_gr) + "  " + Convert.ToString(Templates[i].name_couple);
 
                 if (couple_name_and_group == "  ")
@@ -124,7 +110,6 @@ namespace Zurnal
                 {
                     dataGridView5.Rows.Add(couple_name_and_group);
                 }
-
             }
             Templates.Clear();
         }
@@ -148,13 +133,16 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView1.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView1.CurrentRow.Index].name_couple;
-            textBox3.Text = "ПН";
-            Form2 f = new Form2();
-            f.textBox1.Text = Templates[dataGridView1.CurrentRow.Index].name_gr;
-            f.textBox2.Text = Templates[dataGridView1.CurrentRow.Index].name_couple;
-            f.textBox3.Text = textBox3.Text;
-            f.ShowDialog();
+            textBox3.Text = Templates[dataGridView1.CurrentRow.Index].week_day;
+            textBox4.Text = Convert.ToString(Templates[dataGridView1.CurrentRow.Index].number_couple);
+            Form2 f2 = new Form2();
+            f2.textBox1.Text = textBox1.Text;
+            f2.textBox2.Text = textBox2.Text;
+            f2.textBox3.Text = textBox3.Text;
+            f2.textBox4.Text = textBox4.Text;
+            f2.ShowDialog();
             Templates.Clear();
+            this.Hide();
         }
 
         private void dataGridView2_DoubleClick(object sender, EventArgs e)
@@ -164,13 +152,16 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView2.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView2.CurrentRow.Index].name_couple;
-            textBox3.Text = "ВТ";
-            Form2 f = new Form2();
-            f.textBox1.Text = Templates[dataGridView2.CurrentRow.Index].name_gr;
-            f.textBox2.Text = Templates[dataGridView2.CurrentRow.Index].name_couple;
-            f.textBox3.Text = textBox3.Text;
-            f.ShowDialog();
+            textBox3.Text = Templates[dataGridView1.CurrentRow.Index].week_day;
+            textBox4.Text = Convert.ToString(Templates[dataGridView1.CurrentRow.Index].number_couple);
+            Form2 f2 = new Form2();
+            f2.textBox1.Text = textBox1.Text;
+            f2.textBox2.Text = textBox2.Text;
+            f2.textBox3.Text = textBox3.Text;
+            f2.textBox4.Text = textBox4.Text;
+            f2.ShowDialog();
             Templates.Clear();
+            this.Hide();
         }
 
         private void dataGridView3_DoubleClick(object sender, EventArgs e)
@@ -180,13 +171,16 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView3.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView3.CurrentRow.Index].name_couple;
-            textBox3.Text = "СР";
-            Form2 f = new Form2();
-            f.textBox1.Text = Templates[dataGridView3.CurrentRow.Index].name_gr;
-            f.textBox2.Text = Templates[dataGridView3.CurrentRow.Index].name_couple;
-            f.textBox3.Text = textBox3.Text;
-            f.ShowDialog();
+            textBox3.Text = Templates[dataGridView1.CurrentRow.Index].week_day;
+            textBox4.Text = Convert.ToString(Templates[dataGridView1.CurrentRow.Index].number_couple);
+            Form2 f2 = new Form2();
+            f2.textBox1.Text = textBox1.Text;
+            f2.textBox2.Text = textBox2.Text;
+            f2.textBox3.Text = textBox3.Text;
+            f2.textBox4.Text = textBox4.Text;
+            f2.ShowDialog();
             Templates.Clear();
+            this.Hide();
         }
 
         private void dataGridView4_DoubleClick(object sender, EventArgs e)
@@ -196,13 +190,16 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView4.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView4.CurrentRow.Index].name_couple;
-            textBox3.Text = "ЧТ";
-            Form2 f = new Form2();
-            f.textBox1.Text = Templates[dataGridView4.CurrentRow.Index].name_gr;
-            f.textBox2.Text = Templates[dataGridView4.CurrentRow.Index].name_couple;
-            f.textBox3.Text = textBox3.Text;
-            f.ShowDialog();
+            textBox3.Text = Templates[dataGridView1.CurrentRow.Index].week_day;
+            textBox4.Text = Convert.ToString(Templates[dataGridView1.CurrentRow.Index].number_couple);
+            Form2 f2 = new Form2();
+            f2.textBox1.Text = textBox1.Text;
+            f2.textBox2.Text = textBox2.Text;
+            f2.textBox3.Text = textBox3.Text;
+            f2.textBox4.Text = textBox4.Text;
+            f2.ShowDialog();
             Templates.Clear();
+            this.Hide();
         }
 
         private void dataGridView5_DoubleClick(object sender, EventArgs e)
@@ -212,18 +209,16 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView5.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView5.CurrentRow.Index].name_couple;
-            textBox3.Text = "ПТ";
-            Form2 f = new Form2();
-            f.textBox1.Text = Templates[dataGridView5.CurrentRow.Index].name_gr;
-            f.textBox2.Text = Templates[dataGridView5.CurrentRow.Index].name_couple;
-            f.textBox3.Text = textBox3.Text;
-            f.ShowDialog();
+            textBox3.Text = Templates[dataGridView1.CurrentRow.Index].week_day;
+            textBox4.Text = Convert.ToString(Templates[dataGridView1.CurrentRow.Index].number_couple);
+            Form2 f2 = new Form2();
+            f2.textBox1.Text = textBox1.Text;
+            f2.textBox2.Text = textBox2.Text;
+            f2.textBox3.Text = textBox3.Text;
+            f2.textBox4.Text = textBox4.Text;
+            f2.ShowDialog();
             Templates.Clear();
-        }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
+            this.Hide();
         }
 
         private void jafhefuaegToolStripMenuItem_Click(object sender, EventArgs e)
@@ -237,6 +232,5 @@ namespace Zurnal
             Group garant = new Group();
             garant.Show();
         }
-
     }
 }

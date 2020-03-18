@@ -16,6 +16,7 @@ namespace Zurnal
         {
             InitializeComponent();
         }
+
         public Form2(string data)
         {
             InitializeComponent();
@@ -61,25 +62,20 @@ namespace Zurnal
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            
-            
-            Attendance f = new Attendance();
-            f.textBox1.Text = textBox1.Text;
-            f.textBox2.Text = textBox2.Text;
-            f.textBox3.Text = textBox3.Text;
-            f.ShowDialog();
+        {      
+            Attendance atten = new Attendance();
+            atten.textBox1.Text = textBox1.Text;
+            atten.textBox2.Text = textBox2.Text;
+            atten.textBox3.Text = textBox3.Text;
+            atten.textBox4.Text = textBox4.Text;
+            atten.Show();
+            this.Hide();
             Templates.Clear();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
 		private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			e.Handled = true;
 		}
-	}
+    }
 }

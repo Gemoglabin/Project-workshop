@@ -17,14 +17,8 @@ namespace Zurnal
 			InitializeComponent();
 		}
 
-        public List<Student> Students = new List<Student>();
+		public List<Student> Students = new List<Student>();
         ClassDataBase db = new ClassDataBase();
-
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-
-		}
 
 		private void Attendance_Load(object sender, EventArgs e)
 		{
@@ -44,24 +38,18 @@ namespace Zurnal
 			DateTime date1 = new DateTime();
 			date1 = DateTime.Today;
 			label1.Text = Convert.ToString(date1.ToShortDateString());
-			
-		}
-
-		private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
-		{
-
 		}
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 boun = new Form1();
-            boun.Show();
-        }
+			this.Hide();
+			Form1 boun = new Form1();
+			boun.Show();
+		}
 
 		private void Save_Attend()
 		{
-			string g = "INSERT INTO timetable(name_gr, week_day, number_couple, name_couple, date) values('" + textBox1.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + label1.Text + "')";
+			string g = "INSERT INTO timetable(name_gr, week_day, number_couple, name_couple, date) values('" + textBox1.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + textBox2.Text + "', '" + label1.Text + "')";
 			int n = db.ExecuteNonQuery("testir.db", g);
 			if (n != 0)
 			{ MessageBox.Show("Збережено", "Information", MessageBoxButtons.OK); }
