@@ -58,5 +58,19 @@ namespace Zurnal
             Form1 boun = new Form1();
             boun.Show();
         }
-    }
+
+		private void Save_Attend()
+		{
+			string g = "INSERT INTO timetable(name_gr, week_day, number_couple, name_couple, date) values('" + textBox1.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + label1.Text + "')";
+			int n = db.ExecuteNonQuery("testir.db", g);
+			if (n != 0)
+			{ MessageBox.Show("Збережено", "Information", MessageBoxButtons.OK); }
+			else MessageBox.Show("Помилка");
+		}
+
+		private void button1_Click_1(object sender, EventArgs e)
+		{
+			Save_Attend();
+		}
+	}
 }

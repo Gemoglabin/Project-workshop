@@ -28,7 +28,7 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             for (int i = 0; i < 5; i++)
             {
-               
+
 
                 string couple_name_and_group = Convert.ToString(Templates[i].name_gr) + "  " + Convert.ToString(Templates[i].name_couple);
 
@@ -148,9 +148,11 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView1.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView1.CurrentRow.Index].name_couple;
+            textBox3.Text = "ПН";
             Form2 f = new Form2();
             f.textBox1.Text = Templates[dataGridView1.CurrentRow.Index].name_gr;
             f.textBox2.Text = Templates[dataGridView1.CurrentRow.Index].name_couple;
+            f.textBox3.Text = textBox3.Text;
             f.ShowDialog();
             Templates.Clear();
         }
@@ -162,9 +164,11 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView2.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView2.CurrentRow.Index].name_couple;
+            textBox3.Text = "ВТ";
             Form2 f = new Form2();
             f.textBox1.Text = Templates[dataGridView2.CurrentRow.Index].name_gr;
             f.textBox2.Text = Templates[dataGridView2.CurrentRow.Index].name_couple;
+            f.textBox3.Text = textBox3.Text;
             f.ShowDialog();
             Templates.Clear();
         }
@@ -176,9 +180,11 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView3.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView3.CurrentRow.Index].name_couple;
+            textBox3.Text = "СР";
             Form2 f = new Form2();
             f.textBox1.Text = Templates[dataGridView3.CurrentRow.Index].name_gr;
             f.textBox2.Text = Templates[dataGridView3.CurrentRow.Index].name_couple;
+            f.textBox3.Text = textBox3.Text;
             f.ShowDialog();
             Templates.Clear();
         }
@@ -190,9 +196,11 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView4.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView4.CurrentRow.Index].name_couple;
+            textBox3.Text = "ЧТ";
             Form2 f = new Form2();
             f.textBox1.Text = Templates[dataGridView4.CurrentRow.Index].name_gr;
             f.textBox2.Text = Templates[dataGridView4.CurrentRow.Index].name_couple;
+            f.textBox3.Text = textBox3.Text;
             f.ShowDialog();
             Templates.Clear();
         }
@@ -204,9 +212,11 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView5.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView5.CurrentRow.Index].name_couple;
+            textBox3.Text = "ПТ";
             Form2 f = new Form2();
             f.textBox1.Text = Templates[dataGridView5.CurrentRow.Index].name_gr;
             f.textBox2.Text = Templates[dataGridView5.CurrentRow.Index].name_couple;
+            f.textBox3.Text = textBox3.Text;
             f.ShowDialog();
             Templates.Clear();
         }
@@ -223,10 +233,10 @@ namespace Zurnal
 
         private void zdcjhdsguygsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-			this.Hide();
-			Group garant = new Group();
-			garant.Show();
-		}
+            this.Hide();
+            Group garant = new Group();
+            garant.Show();
+        }
 
     }
-} 
+}

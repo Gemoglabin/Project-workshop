@@ -19,8 +19,8 @@ namespace Zurnal
         public Form2(string data)
         {
             InitializeComponent();
-            this.textBox1.Text = data;
-            this.textBox2.Text = data;
+            //this.textBox1.Text = data;
+            //this.textBox2.Text = data;
         }
 
         public List<Template> Templates = new List<Template>();
@@ -67,6 +67,7 @@ namespace Zurnal
             Attendance f = new Attendance();
             f.textBox1.Text = textBox1.Text;
             f.textBox2.Text = textBox2.Text;
+            f.textBox3.Text = textBox3.Text;
             f.ShowDialog();
             Templates.Clear();
         }
