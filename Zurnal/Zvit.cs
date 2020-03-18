@@ -45,5 +45,27 @@ namespace Zurnal
         {
             InputGroup();
         }
-    }
+
+		private void розкладToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Form1 garant = new Form1();
+			garant.ShowDialog();
+		}
+
+		private void cmbgroup_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void DropDownList(object sender, EventArgs e)
+		{
+
+		}
+
+		private void cmbgroup_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			e.Handled = true;
+		}
+	}
 }

@@ -75,5 +75,10 @@ namespace Zurnal
         {
 
         }
-    }
+
+		private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			e.Handled = true;
+		}
+	}
 }

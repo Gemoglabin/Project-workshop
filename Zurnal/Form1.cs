@@ -223,8 +223,10 @@ namespace Zurnal
 
         private void zdcjhdsguygsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
+			this.Hide();
+			Group garant = new Group();
+			garant.Show();
+		}
 
     }
 } 

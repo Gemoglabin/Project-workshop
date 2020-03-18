@@ -21,5 +21,22 @@ namespace Zurnal
         {
 
         }
-    }
+
+		private void groupBox1_Enter(object sender, EventArgs e)
+		{
+
+		}
+
+		private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			e.Handled = true;
+		}
+
+		private void btnback_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Form1 boun = new Form1();
+			boun.Show();
+		}
+	}
 }
