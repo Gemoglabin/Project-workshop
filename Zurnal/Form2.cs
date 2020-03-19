@@ -62,20 +62,44 @@ namespace Zurnal
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {      
-            Attendance atten = new Attendance();
-            atten.textBox1.Text = textBox1.Text;
-            atten.textBox2.Text = textBox2.Text;
-            atten.textBox3.Text = textBox3.Text;
-            atten.textBox4.Text = textBox4.Text;
-            atten.Show();
-            this.Hide();
-            Templates.Clear();
+        {
+
+            if (checkBox1.Checked)
+            {
+                MessageBox.Show("Тут нужно зделать сохранение  в базу пустой пары!!!");
+            }
+            else
+            {
+                Attendance atten = new Attendance();
+                atten.textBox1.Text = textBox1.Text;
+                atten.textBox2.Text = textBox2.Text;
+                atten.textBox3.Text = textBox3.Text;
+                atten.textBox4.Text = textBox4.Text;
+                atten.Show();
+                this.Hide();
+                Templates.Clear();
+            }
+            
         }
 
 		private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			e.Handled = true;
 		}
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                comboBox1.Enabled = false;
+                comboBox2.Enabled = false;
+            }
+            else
+            {
+                comboBox1.Enabled = true;
+                comboBox2.Enabled = true;
+            }
+
+        }
     }
 }
