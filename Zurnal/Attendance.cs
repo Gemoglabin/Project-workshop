@@ -63,7 +63,7 @@ namespace Zurnal
 			}
 			for (int i = 0; i < (dataGridView1.RowCount); i++)
 			{
-				string s = @"SELECT * FROM student WHERE fio = '" + Convert.ToString(dataGridView1[1, i].Value) + "'";
+				string s = @"SELECT * FROM student WHERE fio = '"+Convert.ToString(dataGridView1.Rows[i].Cells[0].Value)+"'";
 				db.Execute<Student>("testir.db", s, ref Students);
 				for (int j = 0; j < Students.Count; j++)
 				{
@@ -71,7 +71,12 @@ namespace Zurnal
 					string save = "INSERT INTO timetable(id_stud, id_time) values('" + stud + "', '" + time + "')";
 					db.ExecuteNonQuery("testir.db", save);
 				}
-				string mark = Convert.ToString(dataGridView1[2, i].Value);
+				Students.Clear();
+				string mark = Convert.ToString(dataGridView1.Rows[i].Cells[1].Value);
+				if (mark=="")
+				{
+					mark="0";
+				}
 				string savee = "INSERT INTO timetable(mark) values('" + mark + "')";
 				db.ExecuteNonQuery("testir.db", savee);
 			}
