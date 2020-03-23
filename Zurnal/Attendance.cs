@@ -68,10 +68,12 @@ namespace Zurnal
 				for (int j = 0; j < Students.Count; j++)
 				{
 					string stud = Convert.ToString(Students[j].id_stud);
-					string mark = Convert.ToString(dataGridView1[2, i].Value);
-					string save = "INSERT INTO timetable(id_stud, id_time, mark) values('" + stud + "', '" + time + "', '" + mark + "')";
+					string save = "INSERT INTO timetable(id_stud, id_time) values('" + stud + "', '" + time + "')";
 					db.ExecuteNonQuery("testir.db", save);
 				}
+				string mark = Convert.ToString(dataGridView1[2, i].Value);
+				string savee = "INSERT INTO timetable(mark) values('" + mark + "')";
+				db.ExecuteNonQuery("testir.db", savee);
 			}
 			MessageBox.Show("Збережено", "", MessageBoxButtons.OK);
 		}
