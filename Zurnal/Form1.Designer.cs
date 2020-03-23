@@ -29,24 +29,23 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.jafhefuaegToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.siguiruhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zdcjhdsguygsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -69,6 +68,14 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
+            // Mon
+            // 
+            this.Mon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Mon.HeaderText = "Понеділок";
+            this.Mon.Name = "Mon";
+            this.Mon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Mon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -83,6 +90,13 @@
             this.dataGridView2.Size = new System.Drawing.Size(143, 215);
             this.dataGridView2.TabIndex = 2;
             this.dataGridView2.DoubleClick += new System.EventHandler(this.dataGridView2_DoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Вівторок";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridView3
             // 
@@ -99,6 +113,12 @@
             this.dataGridView3.TabIndex = 3;
             this.dataGridView3.DoubleClick += new System.EventHandler(this.dataGridView3_DoubleClick);
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Середа";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // dataGridView4
             // 
             this.dataGridView4.AllowUserToAddRows = false;
@@ -113,6 +133,12 @@
             this.dataGridView4.Size = new System.Drawing.Size(143, 215);
             this.dataGridView4.TabIndex = 4;
             this.dataGridView4.DoubleClick += new System.EventHandler(this.dataGridView4_DoubleClick);
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Четвер";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridView5
             // 
@@ -129,6 +155,12 @@
             this.dataGridView5.TabIndex = 5;
             this.dataGridView5.DoubleClick += new System.EventHandler(this.dataGridView5_DoubleClick);
             // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "П\'ятниця";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -143,19 +175,10 @@
             // 
             // jafhefuaegToolStripMenuItem
             // 
-            this.jafhefuaegToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.siguiruhToolStripMenuItem});
             this.jafhefuaegToolStripMenuItem.Name = "jafhefuaegToolStripMenuItem";
             this.jafhefuaegToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.jafhefuaegToolStripMenuItem.Text = "Звіт";
             this.jafhefuaegToolStripMenuItem.Click += new System.EventHandler(this.jafhefuaegToolStripMenuItem_Click);
-            // 
-            // siguiruhToolStripMenuItem
-            // 
-            this.siguiruhToolStripMenuItem.Name = "siguiruhToolStripMenuItem";
-            this.siguiruhToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.siguiruhToolStripMenuItem.Text = "Оформити звіт";
-            this.siguiruhToolStripMenuItem.Click += new System.EventHandler(this.siguiruhToolStripMenuItem_Click);
             // 
             // zdcjhdsguygsToolStripMenuItem
             // 
@@ -203,39 +226,6 @@
             this.textBox4.TabIndex = 10;
             this.textBox4.Visible = false;
             // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Середа";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Четвер";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "П\'ятниця";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Mon
-            // 
-            this.Mon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Mon.HeaderText = "Понеділок";
-            this.Mon.Name = "Mon";
-            this.Mon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Mon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Вівторок";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,7 +269,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem jafhefuaegToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zdcjhdsguygsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem siguiruhToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
