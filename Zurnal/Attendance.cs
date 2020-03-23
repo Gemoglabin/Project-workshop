@@ -57,28 +57,20 @@ namespace Zurnal
 		{
 			string time = @"SELECT * FROM timetable ORDER BY id_time DESC LIMIT 1";
 			db.Execute<Timetable>("testir.db", time, ref Timetables);
-			for (int i = 0; i < Timetables.Count; i++)
-			{
+			for (int i = 0; i < Timetables.Count; i++) {
 				time = Convert.ToString(Timetables[i].Id_time);
 			}
-			for (int i = 0; i < (dataGridView1.RowCount); i++)
-			{
-				string s = @"SELECT * FROM student WHERE fio = '"+Convert.ToString(dataGridView1.Rows[i].Cells[0].Value)+"'";
+			for (int i = 0; i < (dataGridView1.RowCount); i++) {
+				string s = @"SELECT * FROM student WHERE fio = '"+ Convert.ToString(dataGridView1.Rows[i].Cells[0].Value)+ "'";
 				db.Execute<Student>("testir.db", s, ref Students);
-				for (int j = 0; j < Students.Count; j++)
-				{
-					string stud = Convert.ToString(Students[j].id_stud);
-					string save = "INSERT INTO timetable(id_stud, id_time) values('" + stud + "', '" + time + "')";
-					db.ExecuteNonQuery("testir.db", save);
+				for (int j = 0; j < Students.Count; j++) {
+					textBox5.Text = Convert.ToString(Students[j].id_stud);
 				}
-				Students.Clear();
 				string mark = Convert.ToString(dataGridView1.Rows[i].Cells[1].Value);
-				if (mark=="")
-				{
-					mark="0";
-				}
-				string savee = "INSERT INTO timetable(mark) values('" + mark + "')";
-				db.ExecuteNonQuery("testir.db", savee);
+				if (mark == "") { mark = "0"; }
+				string save = "INSERT INTO visit(id_stud, id_time, mark) values('" + textBox5.Text + "', '" + time + "', '" + mark + "')";
+				db.ExecuteNonQuery("testir.db", save);
+				Students.Clear();
 			}
 			MessageBox.Show("Збережено", "", MessageBoxButtons.OK);
 		}
