@@ -153,7 +153,7 @@ namespace Zurnal
             textBox1.Text = Templates[dataGridView2.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView2.CurrentRow.Index].name_couple;
             textBox3.Text = Templates[dataGridView1.CurrentRow.Index].week_day;
-            textBox4.Text = Convert.ToString(Templates[dataGridView1.CurrentRow.Index].number_couple);
+            textBox4.Text = Convert.ToString(Templates[dataGridView2.CurrentRow.Index].number_couple);
             Form2 f2 = new Form2();
             f2.textBox1.Text = textBox1.Text;
             f2.textBox2.Text = textBox2.Text;
@@ -172,7 +172,7 @@ namespace Zurnal
             textBox1.Text = Templates[dataGridView3.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView3.CurrentRow.Index].name_couple;
             textBox3.Text = Templates[dataGridView1.CurrentRow.Index].week_day;
-            textBox4.Text = Convert.ToString(Templates[dataGridView1.CurrentRow.Index].number_couple);
+            textBox4.Text = Convert.ToString(Templates[dataGridView3.CurrentRow.Index].number_couple);
             Form2 f2 = new Form2();
             f2.textBox1.Text = textBox1.Text;
             f2.textBox2.Text = textBox2.Text;
@@ -191,7 +191,7 @@ namespace Zurnal
             textBox1.Text = Templates[dataGridView4.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView4.CurrentRow.Index].name_couple;
             textBox3.Text = Templates[dataGridView1.CurrentRow.Index].week_day;
-            textBox4.Text = Convert.ToString(Templates[dataGridView1.CurrentRow.Index].number_couple);
+            textBox4.Text = Convert.ToString(Templates[dataGridView4.CurrentRow.Index].number_couple);
             Form2 f2 = new Form2();
             f2.textBox1.Text = textBox1.Text;
             f2.textBox2.Text = textBox2.Text;
@@ -210,7 +210,7 @@ namespace Zurnal
             textBox1.Text = Templates[dataGridView5.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView5.CurrentRow.Index].name_couple;
             textBox3.Text = Templates[dataGridView1.CurrentRow.Index].week_day;
-            textBox4.Text = Convert.ToString(Templates[dataGridView1.CurrentRow.Index].number_couple);
+            textBox4.Text = Convert.ToString(Templates[dataGridView5.CurrentRow.Index].number_couple);
             Form2 f2 = new Form2();
             f2.textBox1.Text = textBox1.Text;
             f2.textBox2.Text = textBox2.Text;
