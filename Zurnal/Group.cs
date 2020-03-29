@@ -174,7 +174,7 @@ namespace Zurnal
 					dataGridView1.Rows.RemoveAt(ind);
 				}
 			}
-				Students.Clear();
+			Students.Clear();
 			
 
 		}
