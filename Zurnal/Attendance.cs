@@ -37,7 +37,7 @@ namespace Zurnal
 
 			DateTime date1 = new DateTime();
 			date1 = DateTime.Today;
-			label1.Text = Convert.ToString(date1.ToShortDateString());
+			label1.Text = Convert.ToString(date1.ToString("dd.MM.yyyy"));
 			button1.Enabled = true;
 		}
 
