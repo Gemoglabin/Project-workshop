@@ -67,6 +67,7 @@
 			this.comboBox2.Name = "comboBox2";
 			this.comboBox2.Size = new System.Drawing.Size(203, 27);
 			this.comboBox2.TabIndex = 1;
+			this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox2_KeyPress);
 			// 
 			// label1
 			// 

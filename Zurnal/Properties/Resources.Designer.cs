@@ -109,5 +109,15 @@ namespace Zurnal.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cropped_hpkk_logo_2019 {
+            get {
+                object obj = ResourceManager.GetObject("cropped-hpkk-logo-2019", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

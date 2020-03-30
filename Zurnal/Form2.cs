@@ -113,5 +113,10 @@ namespace Zurnal
 			Form1 boun = new Form1();
 			boun.Show();
 		}
+
+		private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			e.Handled = true;
+		}
 	}
 }
