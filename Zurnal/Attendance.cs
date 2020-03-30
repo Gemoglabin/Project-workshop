@@ -37,7 +37,8 @@ namespace Zurnal
 
 			DateTime date1 = new DateTime();
 			date1 = DateTime.Today;
-			label1.Text = Convert.ToString(date1.ToShortDateString());
+			label1.Text = Convert.ToString(date1.ToString("dd.MM.yyyy"));
+			button1.Enabled = true;
 		}
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,6 +80,12 @@ namespace Zurnal
 		{
 			Save_Time();
 			Save_Attend();
+			button1.Enabled = false;
 		}
-	}
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    }
 }
