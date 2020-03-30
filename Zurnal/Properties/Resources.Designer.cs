@@ -63,6 +63,16 @@ namespace Zurnal.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap app_1646213_640 {
+            get {
+                object obj = ResourceManager.GetObject("app-1646213_640", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back_3765 {
             get {
                 object obj = ResourceManager.GetObject("back_3765", resourceCulture);
@@ -86,6 +96,16 @@ namespace Zurnal.Properties {
         internal static System.Drawing.Bitmap back_6315 {
             get {
                 object obj = ResourceManager.GetObject("back_6315", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backward {
+            get {
+                object obj = ResourceManager.GetObject("backward", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -48,9 +48,6 @@ namespace Zurnal
 
 		private void розкладToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			this.Hide();
-			Form1 garant = new Form1();
-			garant.ShowDialog();
 		}
 
 		private void cmbgroup_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,6 +63,13 @@ namespace Zurnal
 		private void cmbgroup_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			e.Handled = true;
+		}
+
+		private void label5_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Form1 boun = new Form1();
+			boun.Show();
 		}
 	}
 }

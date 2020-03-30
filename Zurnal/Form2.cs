@@ -107,6 +107,11 @@ namespace Zurnal
 		
 		}
 
-		
+		private void label5_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Form1 boun = new Form1();
+			boun.Show();
+		}
 	}
 }

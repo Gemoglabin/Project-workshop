@@ -32,25 +32,6 @@ namespace Zurnal
 		private void btnback_Click(object sender, EventArgs e)
 		{
 
-			bool check = true;
-			for (int i=0;i<comboBox1.Items.Count; i++)
-			{
-				Students.Clear();
-				string s = @"SELECT * FROM student WHERE name_gr='" + comboBox1.Items[i] + "';";
-				db.Execute<Student>("testir.db", s, ref Students);
-				if (Students.Count == 0)
-				{
-					check = false;
-					MessageBox.Show("Група " + comboBox1.Items[i] + " порожня. Щоб вийти потрібно додати хоча б одного студента");
-				}
-			}
-			Students.Clear();
-			if (check)
-			{
-				this.Hide();
-				Form1 boun = new Form1();
-				boun.Show();
-			}
 			
 		}
 
@@ -210,6 +191,30 @@ namespace Zurnal
 			MessageBoxDefaultButton.Button1) != DialogResult.Yes)
 			{
 				e.Cancel = true;
+			}
+		}
+
+		private void label5_Click(object sender, EventArgs e)
+		{
+
+			bool check = true;
+			for (int i = 0; i < comboBox1.Items.Count; i++)
+			{
+				Students.Clear();
+				string s = @"SELECT * FROM student WHERE name_gr='" + comboBox1.Items[i] + "';";
+				db.Execute<Student>("testir.db", s, ref Students);
+				if (Students.Count == 0)
+				{
+					check = false;
+					MessageBox.Show("Група " + comboBox1.Items[i] + " порожня. Щоб вийти потрібно додати хоча б одного студента");
+				}
+			}
+			Students.Clear();
+			if (check)
+			{
+				this.Hide();
+				Form1 boun = new Form1();
+				boun.Show();
 			}
 		}
 	}
