@@ -66,6 +66,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(143, 215);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // Mon
@@ -89,6 +90,7 @@
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.Size = new System.Drawing.Size(143, 215);
             this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             this.dataGridView2.DoubleClick += new System.EventHandler(this.dataGridView2_DoubleClick);
             // 
             // dataGridViewTextBoxColumn1
@@ -132,6 +134,7 @@
             this.dataGridView4.RowHeadersVisible = false;
             this.dataGridView4.Size = new System.Drawing.Size(143, 215);
             this.dataGridView4.TabIndex = 4;
+            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             this.dataGridView4.DoubleClick += new System.EventHandler(this.dataGridView4_DoubleClick);
             // 
             // dataGridViewTextBoxColumn3
@@ -190,7 +193,7 @@
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.выходToolStripMenuItem.Text = "Вихід";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 

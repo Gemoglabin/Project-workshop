@@ -66,7 +66,11 @@ namespace Zurnal
 
             if (checkBox1.Checked)
             {
-                MessageBox.Show("Тут нужно зделать сохранение  в базу пустой пары!!!");
+                this.Hide();
+                Form1 back = new Form1();
+                back.Show();
+
+  
             }
             else
             {
@@ -100,6 +104,13 @@ namespace Zurnal
                 comboBox2.Enabled = true;
             }
 
+        }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 boun = new Form1();
+            boun.Show();
         }
     }
 }

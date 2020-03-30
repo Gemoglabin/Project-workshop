@@ -38,6 +38,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnback = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -139,11 +140,25 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // btnback
+            // 
+            this.btnback.BackColor = System.Drawing.Color.Transparent;
+            this.btnback.BackgroundImage = global::Zurnal.Properties.Resources.back_5271;
+            this.btnback.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnback.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnback.Location = new System.Drawing.Point(12, 9);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(40, 38);
+            this.btnback.TabIndex = 10;
+            this.btnback.UseVisualStyleBackColor = false;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 296);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -176,5 +191,6 @@
 		public System.Windows.Forms.TextBox textBox3;
         public System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btnback;
     }
 }
