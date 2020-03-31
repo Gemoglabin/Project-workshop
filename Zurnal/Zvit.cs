@@ -29,12 +29,13 @@ namespace Zurnal
             db.Execute<Template>("testir.db", z, ref Templates);
             for (int i = 0; i < Templates.Count; i++)
             {
-                if (!(cmbgroup.Items.Contains(Templates[i].name_gr)))
+                if (!(cmbgroup.Items.Contains(Templates[i].name_gr)) && Templates[i].name_gr != "")
                 {
                     cmbgroup.Items.Add(Templates[i].name_gr);
                 }
             }
-            cmbgroup.Text = textBox3.Text;
+            cmbgroup.SelectedItem = cmbgroup.Items[0];
+            Templates.Clear();
         }
 
         private void розкладToolStripMenuItem1_Click(object sender, EventArgs e)

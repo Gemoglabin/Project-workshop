@@ -33,7 +33,7 @@ namespace Zurnal
             db.Execute<Template>("testir.db", z, ref Templates);
             for (int i = 0; i < Templates.Count; i++)
             {
-                if (!(comboBox1.Items.Contains(Templates[i].name_gr)))
+                if (!(comboBox1.Items.Contains(Templates[i].name_gr)) && Templates[i].name_gr != "")
                 {
                     comboBox1.Items.Add(Templates[i].name_gr);
                 }
@@ -47,7 +47,7 @@ namespace Zurnal
             db.Execute<Template>("testir.db", m, ref Templates);
             for (int i = 0; i < Templates.Count; i++)
             {
-                if (!(comboBox2.Items.Contains(Templates[i].name_couple)))
+                if (!(comboBox2.Items.Contains(Templates[i].name_couple)) && Templates[i].name_couple != "")
                 {
                     comboBox2.Items.Add(Templates[i].name_couple);
                 }

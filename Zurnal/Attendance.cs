@@ -22,9 +22,19 @@ namespace Zurnal
 		public List<Timetable> Timetables = new List<Timetable>();
 		ClassDataBase db = new ClassDataBase();
 
+		private void DataGridComboboxSetDefault()
+		{
+			for (int i = 0; i < (dataGridView1.RowCount); i++)
+			{
+				dataGridView1.Rows[i].Cells[1].Value = 0;
+			}
+			
+		}
+
 		private void Attendance_Load(object sender, EventArgs e)
 		{
-            string s = @"SELECT * FROM student WHERE name_gr = '"+textBox1.Text+"';";
+		
+			string s = @"SELECT * FROM student WHERE name_gr = '"+textBox1.Text+"';";
             db.Execute<Student>("testir.db", s, ref Students);
             for (int i = 0; i < Students.Count; i++)
 			{
@@ -39,6 +49,8 @@ namespace Zurnal
 			date1 = DateTime.Today;
 			label1.Text = Convert.ToString(date1.ToString("yyyy-MM-dd"));
 			button1.Enabled = true;
+
+			DataGridComboboxSetDefault();
 		}
 
         private void button1_Click(object sender, EventArgs e)
@@ -96,6 +108,11 @@ namespace Zurnal
 			this.Hide();
 			Form1 boun = new Form1();
 			boun.Show();
+		}
+
+		private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+		{
+
 		}
 	}
 }
