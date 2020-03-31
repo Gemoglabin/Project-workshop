@@ -22,8 +22,55 @@ namespace Zurnal
 
         ClassDataBase db = new ClassDataBase();
 
+        private void Weekend()
+        {
+            DialogResult result = MessageBox.Show("Сегодня выходной. Идите 'Налейте чаю!!!'",
+                            "Даня уже З*%^&@СЯ это делать",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Stop,
+                            MessageBoxDefaultButton.Button1);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                MessageBox.Show("Только потому что ты лапочка я дам тебе возможность тестировать приложение по выходным. Хотя я мог заставить тебя постояно менять время на компьютере. Будешь должен");
+                dataGridView1.Enabled = true;
+                dataGridView2.Enabled = true;
+                dataGridView3.Enabled = true;
+                dataGridView4.Enabled = true;
+                dataGridView5.Enabled = true;
+            }
+
+
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            dataGridView1.Enabled = false;
+            dataGridView2.Enabled = false;
+            dataGridView3.Enabled = false;
+            dataGridView4.Enabled = false;
+            dataGridView5.Enabled = false;
+
+            DateTime date1 = new DateTime();
+            date1 = DateTime.Today;
+            string dayofweek = date1.DayOfWeek.ToString();
+
+            switch (dayofweek)
+            {
+                case "Monday": { dataGridView1.Enabled = true; break; }
+                case "Tuesday": { dataGridView2.Enabled = true; break; }
+                case "Wednesday": { dataGridView3.Enabled = true; break; }
+                case "Thursday": { dataGridView4.Enabled = true; break; }
+                case "Friday": { dataGridView5.Enabled = true; break; }
+                default: Weekend(); break;
+            }
+            
+
             string s = @"SELECT * from template where week_day='ПН';";
             db.Execute<Template>("testir.db", s, ref Templates);
             for (int i = 0; i < 5; i++)
