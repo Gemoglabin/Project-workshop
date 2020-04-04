@@ -50,7 +50,6 @@ namespace Zurnal
 		private void comboBox1_TextChanged(object sender, EventArgs e)
 		{
 			ShowDatagridview();
-			CheckDelete();
 		}
 
 		private void ShowDatagridview()
@@ -113,22 +112,6 @@ namespace Zurnal
 			}
 			textBox2.Text = "";
 			ShowDatagridview();
-		}
-
-		private void CheckDelete()
-		{
-			//Students.Clear();
-			//string s = @"SELECT * FROM student WHERE name_gr='" + comboBox1.Text + "';";
-			//db.Execute<Student>("testir.db", s, ref Students);
-			//if (Students.Count == 0)
-			//{
-			//	button1.Enabled = false;
-			//}
-			//else
-			//{
-			//	button4.Enabled = true;
-			//}
-			//Students.Clear();
 		}
 
 		private void button1_Click(object sender, EventArgs e)
