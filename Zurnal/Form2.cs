@@ -25,6 +25,7 @@ namespace Zurnal
         }
 
         public List<Template> Templates = new List<Template>();
+        public List<Timetable> Timetables = new List<Timetable>();
         ClassDataBase db = new ClassDataBase();
 
         private void InputGroup()
@@ -63,10 +64,27 @@ namespace Zurnal
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            DateTime date1 = new DateTime();
+            date1 = DateTime.Today;
+            date.Text = Convert.ToString(date1.ToString("yyyy-MM-dd"));
             if (checkBox1.Checked)
             {
-                MessageBox.Show("Тут нужно зделать сохранение  в базу пустой пары!!!");
+                string checkIdTime = @"SELECT * FROM timetable WHERE date = '" + date.Text + "' AND number_couple = '" + textBox4.Text + "'";
+                db.Execute<Timetable>("testir.db", checkIdTime, ref Timetables);
+                for (int i = 0; i < Timetables.Count; i++)
+                {
+                    time.Text = Convert.ToString(Timetables[i].Id_time);
+                }
+                if(time.Text != "")
+                {
+                    if(MessageBox.Show("Бажаєте видалити збережену пару?", "Видалення існуючої пари", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes){
+
+                        string delvisit = "DELETE FROM visit WHERE id_time = '" + time.Text + "' ";
+                        db.ExecuteNonQuery("testir.db", delvisit);
+                        string deltime = "DELETE FROM timetable WHERE id_time = '" + time.Text + "' ";
+                        db.ExecuteNonQuery("testir.db", deltime);
+                    }
+                }
             }
             else
             {
