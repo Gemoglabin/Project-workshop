@@ -136,15 +136,15 @@ namespace Zurnal
             ExcelWorkSheet = (Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
             ExcelWorkSheet.Cells[1, 7] = "";
 
-            for (int i =3; i < dataGridView1.Columns.Count + 1; i++)
+            for (int i =1; i < dataGridView1.Columns.Count + 1; i++)
             {
-                ExcelWorkSheet.Cells[3, i] = dataGridView1.Columns[i - 2].HeaderText;
+                ExcelWorkSheet.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
             }
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 for (int j =0 ; j < dataGridView1.Columns.Count; j++)
                 {
-                    ExcelWorkSheet.Cells[i + 1, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                    ExcelWorkSheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
                 }
             }
             ExcelApp.Columns.AutoFit();
