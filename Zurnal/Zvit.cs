@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Office.Interop;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Zurnal
 {
@@ -123,6 +125,31 @@ namespace Zurnal
 
 
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+            Excel.Workbook ExcelWorkBook;
+            Excel.Worksheet ExcelWorkSheet;
+            ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
+            ExcelWorkSheet = (Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
+            ExcelWorkSheet.Cells[1, 7] = "";
+
+            for (int i =3; i < dataGridView1.Columns.Count + 1; i++)
+            {
+                ExcelWorkSheet.Cells[3, i] = dataGridView1.Columns[i - 2].HeaderText;
+            }
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                for (int j =0 ; j < dataGridView1.Columns.Count; j++)
+                {
+                    ExcelWorkSheet.Cells[i + 1, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            ExcelApp.Columns.AutoFit();
+
+            ExcelApp.Visible = true;
         }
     }
 }
