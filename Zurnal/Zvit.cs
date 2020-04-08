@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Reflection;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace Zurnal
 {
@@ -163,11 +166,6 @@ namespace Zurnal
             {
                 Export_Data_To_Word(dataGridView1, sfd.FileName);
             }
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
 
         }
 
