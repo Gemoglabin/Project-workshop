@@ -30,7 +30,6 @@
         {
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -63,6 +62,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "За тиждень";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -76,19 +76,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "За місяць";
             this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton3.ForeColor = System.Drawing.SystemColors.Window;
-            this.radioButton3.Location = new System.Drawing.Point(373, 86);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(94, 17);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "За семестр";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // button1
             // 
@@ -249,10 +237,10 @@
             // 
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(137, 115);
+            this.dateTimePicker1.Location = new System.Drawing.Point(194, 119);
             this.dateTimePicker1.MaxDate = new System.DateTime(2081, 12, 27, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
             this.dateTimePicker1.TabIndex = 22;
             this.dateTimePicker1.Value = new System.DateTime(2020, 4, 1, 0, 0, 0, 0);
             // 
@@ -260,10 +248,10 @@
             // 
             this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(373, 115);
+            this.dateTimePicker2.Location = new System.Drawing.Point(318, 119);
             this.dateTimePicker2.MaxDate = new System.DateTime(2069, 8, 24, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(89, 20);
             this.dateTimePicker2.TabIndex = 23;
             this.dateTimePicker2.Value = new System.DateTime(2020, 4, 1, 0, 0, 0, 0);
             // 
@@ -271,13 +259,14 @@
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radioButton4.Location = new System.Drawing.Point(19, 119);
+            this.radioButton4.Location = new System.Drawing.Point(373, 86);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(77, 17);
             this.radioButton4.TabIndex = 24;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "За период";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // Zvit
             // 
@@ -300,7 +289,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -319,7 +307,6 @@
         #endregion
 		private System.Windows.Forms.RadioButton radioButton1;
 		private System.Windows.Forms.RadioButton radioButton2;
-		private System.Windows.Forms.RadioButton radioButton3;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;

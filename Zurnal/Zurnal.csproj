@@ -94,6 +94,18 @@
     <Compile Include="Report.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="Template.cs" />
+    <Compile Include="TemplateConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemplateConfirm.Designer.cs">
+      <DependentUpon>TemplateConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemplateForm.Designer.cs">
+      <DependentUpon>TemplateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Timatable.cs" />
     <Compile Include="Zvit.cs">
       <SubType>Form</SubType>
@@ -123,6 +135,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TemplateConfirm.resx">
+      <DependentUpon>TemplateConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateForm.resx">
+      <DependentUpon>TemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Zvit.resx">
       <DependentUpon>Zvit.cs</DependentUpon>
     </EmbeddedResource>

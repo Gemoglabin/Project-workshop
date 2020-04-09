@@ -105,10 +105,7 @@ namespace Zurnal
                 this.dataGridView1.Sort(this.dataGridView1.Columns[0], ListSortDirection.Ascending);
                 Reports.Clear();
             }
-            if (radioButton3.Checked)
-            {
-                MessageBox.Show("Я хз как зделать за семестр, так как семестр после зимы стартует по разному, а если брать за все время то туда могут попасть и другие семестры если таковые будут");
-            }
+           
             if (radioButton4.Checked)
             {
                 dataGridView1.Rows.Clear();
@@ -254,10 +251,23 @@ namespace Zurnal
             }
         }
 
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            dateTimePicker1.Enabled = false;
+            dateTimePicker2.Enabled = false;
 
+        }
 
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            dateTimePicker1.Enabled = false;
+            dateTimePicker2.Enabled = false;
+        }
 
-        
-
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            dateTimePicker1.Enabled = true;
+            dateTimePicker2.Enabled = true;
+        }
     }
 }

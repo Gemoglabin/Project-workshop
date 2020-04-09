@@ -25,7 +25,7 @@ namespace Zurnal
         private void Weekend()
         {
             DialogResult result = MessageBox.Show("Сегодня выходной. Идите 'Налейте чаю!!!'",
-                            "Даня уже З*%^&@СЯ это делать",
+                            "",
                             MessageBoxButtons.YesNo,
                             MessageBoxIcon.Stop,
                             MessageBoxDefaultButton.Button1);
@@ -199,7 +199,7 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView2.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView2.CurrentRow.Index].name_couple;
-            textBox3.Text = Templates[dataGridView1.CurrentRow.Index].week_day;
+            textBox3.Text = Templates[dataGridView2.CurrentRow.Index].week_day;
             textBox4.Text = Convert.ToString(Templates[dataGridView2.CurrentRow.Index].number_couple);
             Form2 f2 = new Form2();
             f2.textBox1.Text = textBox1.Text;
@@ -218,7 +218,7 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView3.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView3.CurrentRow.Index].name_couple;
-            textBox3.Text = Templates[dataGridView1.CurrentRow.Index].week_day;
+            textBox3.Text = Templates[dataGridView3.CurrentRow.Index].week_day;
             textBox4.Text = Convert.ToString(Templates[dataGridView3.CurrentRow.Index].number_couple);
             Form2 f2 = new Form2();
             f2.textBox1.Text = textBox1.Text;
@@ -237,7 +237,7 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView4.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView4.CurrentRow.Index].name_couple;
-            textBox3.Text = Templates[dataGridView1.CurrentRow.Index].week_day;
+            textBox3.Text = Templates[dataGridView4.CurrentRow.Index].week_day;
             textBox4.Text = Convert.ToString(Templates[dataGridView4.CurrentRow.Index].number_couple);
             Form2 f2 = new Form2();
             f2.textBox1.Text = textBox1.Text;
@@ -256,7 +256,7 @@ namespace Zurnal
             db.Execute<Template>("testir.db", s, ref Templates);
             textBox1.Text = Templates[dataGridView5.CurrentRow.Index].name_gr;
             textBox2.Text = Templates[dataGridView5.CurrentRow.Index].name_couple;
-            textBox3.Text = Templates[dataGridView1.CurrentRow.Index].week_day;
+            textBox3.Text = Templates[dataGridView5.CurrentRow.Index].week_day;
             textBox4.Text = Convert.ToString(Templates[dataGridView5.CurrentRow.Index].number_couple);
             Form2 f2 = new Form2();
             f2.textBox1.Text = textBox1.Text;
@@ -311,5 +311,12 @@ namespace Zurnal
 		{
 
 		}
-	}
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            TemplateForm garant = new TemplateForm();
+            garant.Show();
+        }
+    }
 }

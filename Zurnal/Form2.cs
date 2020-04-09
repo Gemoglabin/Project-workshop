@@ -61,16 +61,17 @@ namespace Zurnal
             InputGroup();
             InputCouple();
         }
+        string datetest;
 
         private void button1_Click(object sender, EventArgs e)
         {
             DateTime date1 = new DateTime();
             date1 = DateTime.Today;
-            date.Text = Convert.ToString(date1.ToString("yyyy-MM-dd"));
+            datetest = Convert.ToString(date1.ToString("yyyy-MM-dd"));
             if (checkBox1.Checked)
             {
                 Timetables.Clear();
-                string checkIdTime = @"SELECT * FROM timetable WHERE date = '" + date.Text + "' AND number_couple = '" + textBox4.Text + "'";
+                string checkIdTime = @"SELECT * FROM timetable WHERE date = '" + datetest + "' AND number_couple = '" + textBox4.Text + "'";
                 db.Execute<Timetable>("testir.db", checkIdTime, ref Timetables);
                 for (int i = 0; i < Timetables.Count; i++)
                 {
@@ -87,20 +88,29 @@ namespace Zurnal
                     }
                     time.Text = "";
                 }
+                
+                this.Hide();
                 Form1 boun = new Form1();
                 boun.Show();
-                this.Hide();
             }
             else
             {
-                Attendance atten = new Attendance();
-                atten.textBox1.Text = textBox1.Text;
-                atten.textBox2.Text = textBox2.Text;
-                atten.textBox3.Text = textBox3.Text;
-                atten.textBox4.Text = textBox4.Text;
-                atten.Show();
-                this.Hide();
-                Templates.Clear();
+                if (comboBox1.Text!="" && comboBox2.Text!="")
+                {
+                    Attendance atten = new Attendance();
+                    atten.textBox1.Text = comboBox1.Text;
+                    atten.textBox2.Text = comboBox2.Text;
+                    atten.textBox3.Text = textBox3.Text;
+                    atten.textBox4.Text = textBox4.Text;
+                    atten.Show();
+                    this.Hide();
+                    Templates.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Заполните поля");
+                }
+                
             }
             
         }

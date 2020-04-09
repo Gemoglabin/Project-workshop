@@ -168,13 +168,13 @@ namespace Zurnal
 
 		private void Group_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			if (MessageBox.Show("Бажаєте вийти з програми?", "Завершення роботи з програмою",
-			MessageBoxButtons.YesNo,
-			MessageBoxIcon.Question,
-			MessageBoxDefaultButton.Button1) != DialogResult.Yes)
-			{
-				e.Cancel = true;
-			}
+			//if (MessageBox.Show("Бажаєте вийти з програми?", "Завершення роботи з програмою",
+			//MessageBoxButtons.YesNo,
+			//MessageBoxIcon.Question,
+			//MessageBoxDefaultButton.Button1) != DialogResult.Yes)
+			//{
+			//	e.Cancel = true;
+			//}
 		}
 
 		private void label5_Click(object sender, EventArgs e)
