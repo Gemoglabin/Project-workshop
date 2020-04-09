@@ -69,6 +69,7 @@ namespace Zurnal
             date.Text = Convert.ToString(date1.ToString("yyyy-MM-dd"));
             if (checkBox1.Checked)
             {
+                Timetables.Clear();
                 string checkIdTime = @"SELECT * FROM timetable WHERE date = '" + date.Text + "' AND number_couple = '" + textBox4.Text + "'";
                 db.Execute<Timetable>("testir.db", checkIdTime, ref Timetables);
                 for (int i = 0; i < Timetables.Count; i++)
@@ -84,7 +85,11 @@ namespace Zurnal
                         string deltime = "DELETE FROM timetable WHERE id_time = '" + time.Text + "' ";
                         db.ExecuteNonQuery("testir.db", deltime);
                     }
+                    time.Text = "";
                 }
+                Form1 boun = new Form1();
+                boun.Show();
+                this.Hide();
             }
             else
             {
