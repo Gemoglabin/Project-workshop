@@ -92,13 +92,13 @@ namespace Zurnal
                 }
                 else
                 {
-                    MessageBox.Show("Такой предмет уже существует");
+                    MessageBox.Show("Предмет з такою назвою вже існує");
                 }
                 
             } 
             else
             {
-                MessageBox.Show("Введите название предмета");
+                MessageBox.Show("Введіть назву предмету");
             }
             
         }
@@ -107,7 +107,7 @@ namespace Zurnal
         {
             if (comboBox1.Text.ToString() == name_gr && comboBox2.Text.ToString() == name_couple && checkBox1.Checked == false)
             {
-                MessageBox.Show("Вы ничего не изменили");
+                MessageBox.Show("Вы не внесли жодних змін");
             }
             else
             {
@@ -115,13 +115,13 @@ namespace Zurnal
                 {
                     if (name_gr == "" && name_couple == "")
                     {
-                        MessageBox.Show("Вы ничего не изменили");
+                        MessageBox.Show("Вы не внесли жодних змін");
                     }
                     else
                     {
                         string save = "UPDATE template SET name_gr = '', name_couple='' WHERE week_day = '" + week_day + "' and number_couple = " + Convert.ToInt32(number_couple) + ";";
                         db.ExecuteNonQuery("testir.db", save);
-                        MessageBox.Show("Сохранено");
+                        MessageBox.Show("Збережено");
                         this.Hide();
                         TemplateForm boun = new TemplateForm();
                         boun.Show();
@@ -134,14 +134,14 @@ namespace Zurnal
                     {
                         string save = "UPDATE template SET name_gr = '" + comboBox1.SelectedItem + "', name_couple='" + comboBox2.SelectedItem + "' WHERE week_day = '" + week_day + "' and number_couple = " + Convert.ToInt32(number_couple) + ";";
                         db.ExecuteNonQuery("testir.db", save);
-                        MessageBox.Show("Сохранено");
+                        MessageBox.Show("Збережено");
                         this.Hide();
                         TemplateForm boun = new TemplateForm();
                         boun.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Заполните оба поля");
+                        MessageBox.Show("Заповніть обидва поля");
                     }
                     
                 }

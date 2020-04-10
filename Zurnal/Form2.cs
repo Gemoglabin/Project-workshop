@@ -81,7 +81,7 @@ namespace Zurnal
                 {
                     timetest = Convert.ToString(Timetables[i].Id_time);
                 }
-                if(timetest != "")
+                if(timetest != "" && (comboBox1.Text != "" && comboBox2.Text != ""))
                 {
                     if(MessageBox.Show("Бажаєте видалити збережену пару?", "Видалення існуючої пари", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes){
 
@@ -99,7 +99,7 @@ namespace Zurnal
             }
             else
             {
-                if (comboBox1.Text!="" || comboBox2.Text!="")
+                if (comboBox1.Text!="" && comboBox2.Text!="")
                 {
                     Attendance atten = new Attendance();
                     atten.name_gr = comboBox1.Text;
