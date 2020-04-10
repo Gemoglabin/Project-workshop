@@ -20,13 +20,16 @@ namespace Zurnal
         public Form2(string data)
         {
             InitializeComponent();
-            //this.textBox1.Text = data;
-            //this.textBox2.Text = data;
         }
 
         public List<Template> Templates = new List<Template>();
         public List<Timetable> Timetables = new List<Timetable>();
         ClassDataBase db = new ClassDataBase();
+
+        public string name_gr;
+        public string name_couple;
+        public string week_day;
+        public string number_couple;
 
         private void InputGroup()
         {
@@ -39,7 +42,7 @@ namespace Zurnal
                     comboBox1.Items.Add(Templates[i].name_gr);
                 }
             }
-            comboBox1.Text = textBox1.Text;
+            comboBox1.Text = name_gr;
         }
 
         private void InputCouple()
@@ -53,7 +56,7 @@ namespace Zurnal
                     comboBox2.Items.Add(Templates[i].name_couple);
                 }
             }
-            comboBox2.Text = textBox2.Text;
+            comboBox2.Text = name_couple;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -72,7 +75,7 @@ namespace Zurnal
             if (checkBox1.Checked)
             {
                 Timetables.Clear();
-                string checkIdTime = @"SELECT * FROM timetable WHERE date = '" + datetest + "' AND number_couple = '" + textBox4.Text + "'";
+                string checkIdTime = @"SELECT * FROM timetable WHERE date = '" + datetest + "' AND number_couple = '" + number_couple + "'";
                 db.Execute<Timetable>("testir.db", checkIdTime, ref Timetables);
                 for (int i = 0; i < Timetables.Count; i++)
                 {
@@ -96,13 +99,13 @@ namespace Zurnal
             }
             else
             {
-                if (comboBox1.Text!="" && comboBox2.Text!="")
+                if (comboBox1.Text!="" || comboBox2.Text!="")
                 {
                     Attendance atten = new Attendance();
-                    atten.textBox1.Text = comboBox1.Text;
-                    atten.textBox2.Text = comboBox2.Text;
-                    atten.textBox3.Text = textBox3.Text;
-                    atten.textBox4.Text = textBox4.Text;
+                    atten.name_gr = comboBox1.Text;
+                    atten.name_couple = comboBox2.Text;
+                    atten.week_day = week_day;
+                    atten.number_couple = number_couple;
                     atten.Show();
                     this.Hide();
                     Templates.Clear();
