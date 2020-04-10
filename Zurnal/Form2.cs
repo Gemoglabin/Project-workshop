@@ -62,6 +62,7 @@ namespace Zurnal
             InputCouple();
         }
         string datetest;
+        string timetest;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -75,18 +76,18 @@ namespace Zurnal
                 db.Execute<Timetable>("testir.db", checkIdTime, ref Timetables);
                 for (int i = 0; i < Timetables.Count; i++)
                 {
-                    time.Text = Convert.ToString(Timetables[i].Id_time);
+                    timetest = Convert.ToString(Timetables[i].Id_time);
                 }
-                if(time.Text != "")
+                if(timetest != "")
                 {
                     if(MessageBox.Show("Бажаєте видалити збережену пару?", "Видалення існуючої пари", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes){
 
-                        string delvisit = "DELETE FROM visit WHERE id_time = '" + time.Text + "' ";
+                        string delvisit = "DELETE FROM visit WHERE id_time = '" + timetest + "' ";
                         db.ExecuteNonQuery("testir.db", delvisit);
-                        string deltime = "DELETE FROM timetable WHERE id_time = '" + time.Text + "' ";
+                        string deltime = "DELETE FROM timetable WHERE id_time = '" + timetest + "' ";
                         db.ExecuteNonQuery("testir.db", deltime);
                     }
-                    time.Text = "";
+                    timetest = "";
                 }
                 
                 this.Hide();

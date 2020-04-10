@@ -187,7 +187,7 @@ namespace Zurnal
             f2.textBox2.Text = textBox2.Text;
             f2.textBox3.Text = textBox3.Text;
             f2.textBox4.Text = textBox4.Text;
-            f2.ShowDialog();
+            f2.Show();
             Templates.Clear();
             this.Hide();
         }
@@ -206,7 +206,7 @@ namespace Zurnal
             f2.textBox2.Text = textBox2.Text;
             f2.textBox3.Text = textBox3.Text;
             f2.textBox4.Text = textBox4.Text;
-            f2.ShowDialog();
+            f2.Show();
             Templates.Clear();
             this.Hide();
         }
@@ -225,7 +225,7 @@ namespace Zurnal
             f2.textBox2.Text = textBox2.Text;
             f2.textBox3.Text = textBox3.Text;
             f2.textBox4.Text = textBox4.Text;
-            f2.ShowDialog();
+            f2.Show();
             Templates.Clear();
             this.Hide();
         }
@@ -244,7 +244,7 @@ namespace Zurnal
             f2.textBox2.Text = textBox2.Text;
             f2.textBox3.Text = textBox3.Text;
             f2.textBox4.Text = textBox4.Text;
-            f2.ShowDialog();
+            f2.Show();
             Templates.Clear();
             this.Hide();
         }
@@ -263,7 +263,7 @@ namespace Zurnal
             f2.textBox2.Text = textBox2.Text;
             f2.textBox3.Text = textBox3.Text;
             f2.textBox4.Text = textBox4.Text;
-            f2.ShowDialog();
+            f2.Show();
             Templates.Clear();
             this.Hide();
         }
