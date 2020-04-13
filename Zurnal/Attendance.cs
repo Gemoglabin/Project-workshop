@@ -37,7 +37,7 @@ namespace Zurnal
 
 		private void Attendance_Load(object sender, EventArgs e)
 		{
-
+			label1.Text = name_couple;
 			string s = @"SELECT * FROM student WHERE name_gr = '" + name_gr + "';";
 			db.Execute<Student>("testir.db", s, ref Students);
 			for (int i = 0; i < Students.Count; i++)

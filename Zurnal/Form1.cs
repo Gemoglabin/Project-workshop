@@ -24,25 +24,29 @@ namespace Zurnal
 
         private void Weekend()
         {
-            DialogResult result = MessageBox.Show("Сегодня выходной. Идите 'Налейте чаю!!!'",
-                            "",
-                            MessageBoxButtons.YesNo,
-                            MessageBoxIcon.Stop,
-                            MessageBoxDefaultButton.Button1);
 
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                MessageBox.Show("Только потому что ты лапочка я дам тебе возможность тестировать приложение по выходным. Хотя я мог заставить тебя постояно менять время на компьютере. Будешь должен");
-                dataGridView1.Enabled = true;
-                dataGridView2.Enabled = true;
-                dataGridView3.Enabled = true;
-                dataGridView4.Enabled = true;
-                dataGridView5.Enabled = true;
-            }
+            label1.Visible = true;
+
+
+            //DialogResult result = MessageBox.Show("Сегодня выходной. Идите 'Налейте чаю!!!'",
+            //                "",
+            //                MessageBoxButtons.YesNo,
+            //                MessageBoxIcon.Stop,
+            //                MessageBoxDefaultButton.Button1);
+
+            //if (result == DialogResult.Yes)
+            //{
+            //    Application.Exit();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Только потому что ты лапочка я дам тебе возможность тестировать приложение по выходным. Хотя я мог заставить тебя постояно менять время на компьютере. Будешь должен");
+            //    dataGridView1.Enabled = true;
+            //    dataGridView2.Enabled = true;
+            //    dataGridView3.Enabled = true;
+            //    dataGridView4.Enabled = true;
+            //    dataGridView5.Enabled = true;
+            //}
 
 
         }

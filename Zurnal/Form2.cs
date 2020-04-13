@@ -24,6 +24,7 @@ namespace Zurnal
 
         public List<Template> Templates = new List<Template>();
         public List<Timetable> Timetables = new List<Timetable>();
+        public List<Student> Students = new List<Student>();
         ClassDataBase db = new ClassDataBase();
 
         public string name_gr;
@@ -33,13 +34,13 @@ namespace Zurnal
 
         private void InputGroup()
         {
-            string z = @"SELECT * FROM template GROUP BY name_gr";
-            db.Execute<Template>("testir.db", z, ref Templates);
-            for (int i = 0; i < Templates.Count; i++)
+            string z = @"SELECT * FROM student GROUP BY name_gr";
+            db.Execute<Student>("testir.db", z, ref Students);
+            for (int i = 0; i < Students.Count; i++)
             {
-                if (!(comboBox1.Items.Contains(Templates[i].name_gr)) && Templates[i].name_gr != "")
+                if (!(comboBox1.Items.Contains(Students[i].name_gr)) && Students[i].name_gr != "")
                 {
-                    comboBox1.Items.Add(Templates[i].name_gr);
+                    comboBox1.Items.Add(Students[i].name_gr);
                 }
             }
             comboBox1.Text = name_gr;

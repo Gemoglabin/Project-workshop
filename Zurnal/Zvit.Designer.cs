@@ -341,7 +341,6 @@
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.DateTimePicker dateTimePicker1;
 		private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -349,5 +348,6 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label5;
     }
 }
