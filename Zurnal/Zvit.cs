@@ -192,9 +192,6 @@ namespace Zurnal
                 }
                 
             }
-
-
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -234,7 +231,6 @@ namespace Zurnal
             {
                 Export_Data_To_Word(dataGridView1, sfd.FileName);
             }
-
         }
 
         public void Export_Data_To_Word(DataGridView dataGridView1, string filename)
@@ -260,7 +256,6 @@ namespace Zurnal
 
                 //Ориентация таблицы
                 oDoc.PageSetup.Orientation = Word.WdOrientation.wdOrientPortrait;
-
 
                 dynamic oRange = oDoc.Content.Application.Selection.Range;
                 string oTemp = "";
@@ -300,7 +295,6 @@ namespace Zurnal
                 oDoc.Application.Selection.Tables[1].Rows[1].Range.Bold = 1;
                 oDoc.Application.Selection.Tables[1].Rows[1].Range.Font.Name = "Times New Roman";
                 oDoc.Application.Selection.Tables[1].Rows[1].Range.Font.Size = 14;
-
                 
                 for (int c = 0; c <= ColumnCount - 1; c++)
                 {
@@ -312,13 +306,8 @@ namespace Zurnal
                 oDoc.Application.Selection.Tables[1].Rows[1].Select();
                 oDoc.Application.Selection.Cells.VerticalAlignment = Word.WdCellVerticalAlignment.wdCellAlignVerticalCenter;
 
-                
-
-
                 //Сохранение файла
                 oDoc.SaveAs2(filename);
-
-                
             }
         }
 

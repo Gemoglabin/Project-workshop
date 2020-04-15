@@ -184,6 +184,7 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Name = "TemplateConfirm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TemplateConfirm";
             this.Load += new System.EventHandler(this.TemplateConfirm_Load);
             this.ResumeLayout(false);
