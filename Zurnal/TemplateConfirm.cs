@@ -21,12 +21,7 @@ namespace Zurnal
         public string week_day;
         public string number_couple;
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            TemplateForm garant = new TemplateForm();
-            garant.Show();
-        }
+      
 
 
         public List<Template> Templates = new List<Template>();
@@ -164,5 +159,12 @@ namespace Zurnal
                 comboBox2.Enabled = true;
             }
         }
-    }
+
+		private void label8_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			TemplateForm boun = new TemplateForm();
+			boun.Show();
+		}
+	}
 }

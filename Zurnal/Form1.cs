@@ -302,5 +302,10 @@ namespace Zurnal
             TemplateForm garant = new TemplateForm();
             garant.Show();
         }
-    }
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
