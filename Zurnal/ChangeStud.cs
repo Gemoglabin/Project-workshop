@@ -25,12 +25,7 @@ namespace Zurnal
             InputGroup();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Group garant = new Group();
-            garant.Show();
-        }
+       
 
         public string studFIO;
         public string group;
@@ -59,5 +54,12 @@ namespace Zurnal
             cbGroup.Text = group;
             Students.Clear();
         }
-    }
+
+		private void label8_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Group garant = new Group();
+			garant.Show();
+		}
+	}
 }
