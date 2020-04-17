@@ -118,9 +118,7 @@ namespace Zurnal
                         string save = "UPDATE template SET name_gr = '', name_couple='' WHERE week_day = '" + week_day + "' and number_couple = " + Convert.ToInt32(number_couple) + ";";
                         db.ExecuteNonQuery("testir.db", save);
                         MessageBox.Show("Збережено");
-                        this.Hide();
-                        TemplateForm boun = new TemplateForm();
-                        boun.Show();
+                       
                     }
                     
                 }

@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.radioButton1 = new System.Windows.Forms.RadioButton();
 			this.radioButton2 = new System.Windows.Forms.RadioButton();
 			this.button1 = new System.Windows.Forms.Button();
@@ -54,9 +57,10 @@
 			// radioButton1
 			// 
 			this.radioButton1.AutoSize = true;
+			this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.radioButton1.ForeColor = System.Drawing.SystemColors.Window;
-			this.radioButton1.Location = new System.Drawing.Point(14, 119);
+			this.radioButton1.Location = new System.Drawing.Point(15, 158);
 			this.radioButton1.Name = "radioButton1";
 			this.radioButton1.Size = new System.Drawing.Size(94, 17);
 			this.radioButton1.TabIndex = 1;
@@ -68,9 +72,10 @@
 			// radioButton2
 			// 
 			this.radioButton2.AutoSize = true;
+			this.radioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.radioButton2.ForeColor = System.Drawing.SystemColors.Window;
-			this.radioButton2.Location = new System.Drawing.Point(144, 119);
+			this.radioButton2.Location = new System.Drawing.Point(145, 158);
 			this.radioButton2.Name = "radioButton2";
 			this.radioButton2.Size = new System.Drawing.Size(84, 17);
 			this.radioButton2.TabIndex = 2;
@@ -83,7 +88,7 @@
 			// 
 			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button1.Location = new System.Drawing.Point(449, 72);
+			this.button1.Location = new System.Drawing.Point(234, 207);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(117, 31);
 			this.button1.TabIndex = 4;
@@ -94,8 +99,8 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.ForeColor = System.Drawing.SystemColors.Window;
-			this.label2.Location = new System.Drawing.Point(7, 138);
+			this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
+			this.label2.Location = new System.Drawing.Point(7, 178);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(577, 13);
 			this.label2.TabIndex = 6;
@@ -106,15 +111,45 @@
 			// 
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+			this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			this.dataGridView1.ColumnHeadersHeight = 50;
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-			this.dataGridView1.Location = new System.Drawing.Point(29, 158);
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+			this.dataGridView1.EnableHeadersVisualStyles = false;
+			this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+			this.dataGridView1.Location = new System.Drawing.Point(30, 253);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ButtonFace;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
 			this.dataGridView1.RowHeadersVisible = false;
-			this.dataGridView1.Size = new System.Drawing.Size(527, 343);
+			this.dataGridView1.Size = new System.Drawing.Size(527, 357);
 			this.dataGridView1.TabIndex = 7;
 			// 
 			// Column1
@@ -131,14 +166,13 @@
 			this.Column2.Name = "Column2";
 			this.Column2.ReadOnly = true;
 			this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-			this.Column2.Width = 150;
 			// 
 			// lblgroup
 			// 
 			this.lblgroup.AutoSize = true;
 			this.lblgroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.lblgroup.ForeColor = System.Drawing.SystemColors.Window;
-			this.lblgroup.Location = new System.Drawing.Point(15, 79);
+			this.lblgroup.Location = new System.Drawing.Point(12, 105);
 			this.lblgroup.Name = "lblgroup";
 			this.lblgroup.Size = new System.Drawing.Size(56, 16);
 			this.lblgroup.TabIndex = 8;
@@ -146,9 +180,10 @@
 			// 
 			// cmbgroup
 			// 
+			this.cmbgroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbgroup.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.cmbgroup.FormattingEnabled = true;
-			this.cmbgroup.Location = new System.Drawing.Point(75, 74);
+			this.cmbgroup.Location = new System.Drawing.Point(72, 100);
 			this.cmbgroup.Margin = new System.Windows.Forms.Padding(2);
 			this.cmbgroup.Name = "cmbgroup";
 			this.cmbgroup.Size = new System.Drawing.Size(100, 27);
@@ -183,7 +218,7 @@
 			// 
 			this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button3.Location = new System.Drawing.Point(318, 507);
+			this.button3.Location = new System.Drawing.Point(318, 629);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(153, 31);
 			this.button3.TabIndex = 20;
@@ -195,7 +230,7 @@
 			// 
 			this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button2.Location = new System.Drawing.Point(141, 507);
+			this.button2.Location = new System.Drawing.Point(127, 629);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(153, 31);
 			this.button2.TabIndex = 19;
@@ -206,8 +241,8 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.ForeColor = System.Drawing.SystemColors.Window;
-			this.label1.Location = new System.Drawing.Point(16, 530);
+			this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
+			this.label1.Location = new System.Drawing.Point(7, 613);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(577, 13);
 			this.label1.TabIndex = 18;
@@ -232,7 +267,7 @@
 			this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
 			this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dateTimePicker1.Location = new System.Drawing.Point(371, 119);
+			this.dateTimePicker1.Location = new System.Drawing.Point(371, 154);
 			this.dateTimePicker1.MaxDate = new System.DateTime(2081, 12, 27, 0, 0, 0, 0);
 			this.dateTimePicker1.Name = "dateTimePicker1";
 			this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
@@ -244,7 +279,7 @@
 			this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
 			this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dateTimePicker2.Location = new System.Drawing.Point(477, 119);
+			this.dateTimePicker2.Location = new System.Drawing.Point(477, 154);
 			this.dateTimePicker2.MaxDate = new System.DateTime(2069, 8, 24, 0, 0, 0, 0);
 			this.dateTimePicker2.Name = "dateTimePicker2";
 			this.dateTimePicker2.Size = new System.Drawing.Size(89, 20);
@@ -254,24 +289,26 @@
 			// radioButton4
 			// 
 			this.radioButton4.AutoSize = true;
+			this.radioButton4.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.radioButton4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.radioButton4.Location = new System.Drawing.Point(264, 119);
+			this.radioButton4.Location = new System.Drawing.Point(269, 158);
 			this.radioButton4.Name = "radioButton4";
-			this.radioButton4.Size = new System.Drawing.Size(86, 17);
+			this.radioButton4.Size = new System.Drawing.Size(82, 17);
 			this.radioButton4.TabIndex = 24;
 			this.radioButton4.TabStop = true;
-			this.radioButton4.Text = "За период";
+			this.radioButton4.Text = "За період";
 			this.radioButton4.UseVisualStyleBackColor = true;
 			this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
 			// 
 			// comboBox1
 			// 
+			this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(282, 74);
+			this.comboBox1.Location = new System.Drawing.Point(391, 100);
 			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(133, 27);
+			this.comboBox1.Size = new System.Drawing.Size(176, 27);
 			this.comboBox1.TabIndex = 25;
 			// 
 			// label6
@@ -279,7 +316,7 @@
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.label6.ForeColor = System.Drawing.SystemColors.Window;
-			this.label6.Location = new System.Drawing.Point(203, 79);
+			this.label6.Location = new System.Drawing.Point(312, 105);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(77, 16);
 			this.label6.TabIndex = 26;
@@ -290,7 +327,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-			this.ClientSize = new System.Drawing.Size(609, 550);
+			this.ClientSize = new System.Drawing.Size(610, 685);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.radioButton4);
@@ -310,8 +347,6 @@
 			this.Controls.Add(this.radioButton2);
 			this.Controls.Add(this.radioButton1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.MaximumSize = new System.Drawing.Size(609, 550);
-			this.MinimumSize = new System.Drawing.Size(609, 489);
 			this.Name = "Zvit";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Звітність";

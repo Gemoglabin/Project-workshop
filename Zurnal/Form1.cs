@@ -85,7 +85,7 @@ namespace Zurnal
 
                 if (couple_name_and_group == " ")
                 {
-                    dataGridView1.Rows.Add(" Окно");
+                    dataGridView1.Rows.Add(" Вікно");
                 }
                 else
                 {
@@ -104,7 +104,7 @@ namespace Zurnal
 
                 if (couple_name_and_group == " ")
                 {
-                    dataGridView2.Rows.Add(" Окно");
+                    dataGridView2.Rows.Add(" Вікно");
                 }
                 else
                 {
@@ -121,7 +121,7 @@ namespace Zurnal
 
                 if (couple_name_and_group == " ")
                 {
-                    dataGridView3.Rows.Add(" Окно");
+                    dataGridView3.Rows.Add(" Вікно");
                 }
                 else
                 {
@@ -138,7 +138,7 @@ namespace Zurnal
 
                 if (couple_name_and_group == " ")
                 {
-                    dataGridView4.Rows.Add(" Окно");
+                    dataGridView4.Rows.Add(" Вікно");
                 }
                 else
                 {
@@ -155,7 +155,7 @@ namespace Zurnal
 
                 if (couple_name_and_group == " ")
                 {
-                    dataGridView5.Rows.Add(" Окно");
+                    dataGridView5.Rows.Add(" Вікно");
                 }
                 else
                 {
