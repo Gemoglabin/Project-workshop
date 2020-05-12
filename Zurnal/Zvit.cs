@@ -39,7 +39,10 @@ namespace Zurnal
                     cmbgroup.Items.Add(Students[i].name_gr);
                 }
             }
-            cmbgroup.SelectedItem = cmbgroup.Items[0];
+            if (Students.Count != 0)
+            {
+                cmbgroup.SelectedItem = cmbgroup.Items[0];
+            }
             Students.Clear();
         }
 
@@ -70,6 +73,13 @@ namespace Zurnal
         {
             InputGroup();
             InputCouple();
+
+            DateTime date1 = new DateTime();
+            date1 = DateTime.Today;
+            dateTimePicker1.Value = Convert.ToDateTime(date1.ToString("yyyy-MM-dd"));
+            dateTimePicker1.MaxDate = dateTimePicker1.Value;
+            dateTimePicker2.Value = Convert.ToDateTime(date1.ToString("yyyy-MM-dd"));
+            dateTimePicker2.MaxDate = dateTimePicker2.Value;
         }
 
         private void розкладToolStripMenuItem_Click(object sender, EventArgs e)

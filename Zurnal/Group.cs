@@ -34,7 +34,11 @@ namespace Zurnal
 			{
 				cbGroup.Items.Add(Students[i].name_gr);
 			}
-			cbGroup.SelectedItem = Students[0].name_gr;
+			if (Students.Count!=0)
+			{
+				cbGroup.SelectedItem = Students[0].name_gr;
+			}
+			
 			Students.Clear();
 		}
 
@@ -92,7 +96,10 @@ namespace Zurnal
 				{
 					cbGroup.Items.Add(Students[i].name_gr);
 				}
-				cbGroup.SelectedItem = Students[0].name_gr;
+				if (Students.Count != 0)
+				{
+					cbGroup.SelectedItem = Students[0].name_gr;
+				}
 				Students.Clear();
 				ShowDatagridview();
 			}

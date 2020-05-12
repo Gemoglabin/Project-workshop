@@ -27,33 +27,65 @@ namespace Zurnal
 
             label1.Visible = true;
 
-
-            //DialogResult result = MessageBox.Show("Сегодня выходной. Идите 'Налейте чаю!!!'",
-            //                "",
-            //                MessageBoxButtons.YesNo,
-            //                MessageBoxIcon.Stop,
-            //                MessageBoxDefaultButton.Button1);
-
-            //if (result == DialogResult.Yes)
-            //{
-            //    Application.Exit();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Только потому что ты лапочка я дам тебе возможность тестировать приложение по выходным. Хотя я мог заставить тебя постояно менять время на компьютере. Будешь должен");
-            //    dataGridView1.Enabled = true;
-            //    dataGridView2.Enabled = true;
-            //    dataGridView3.Enabled = true;
-            //    dataGridView4.Enabled = true;
-            //    dataGridView5.Enabled = true;
-            //}
-
-
         }
+
+        //private void testWrite()
+        //{
+        //    label5.Text = Convert.ToString(Convert.ToInt32(label5.Text) + 1);
+        //}
+        private void FirstLoadOnly()
+        {
+            string s = @"SELECT * from template;";
+            db.Execute<Template>("testir.db", s, ref Templates);
+            if (Templates.Count == 0)
+            {
+               
+                    for (int j = 1; j < 6; j++)
+                    {
+                        Templates.Clear();
+                        string setTime = "INSERT  into template(week_day, number_couple) VALUES ('ПН','"+j+"');";
+                        db.ExecuteNonQuery("testir.db", setTime);
+                        Templates.Clear();
+                        
+                        
+                    }
+                    for (int j = 1; j < 6; j++)
+                    {
+                        Templates.Clear();
+                        string setTime = "INSERT  into template(week_day, number_couple) VALUES ('ВТ','" + j + "');";
+                        db.ExecuteNonQuery("testir.db", setTime);
+                        
+                    }
+                    for (int j = 1; j < 6; j++)
+                    {
+                        Templates.Clear();
+                        string setTime = "INSERT  into template(week_day, number_couple) VALUES ('СР','" + j + "');";
+                        db.ExecuteNonQuery("testir.db", setTime);
+                        
+                    }
+                    for (int j = 1; j < 6; j++)
+                    {
+                        Templates.Clear();
+                        string setTime = "INSERT  into template(week_day, number_couple) VALUES ('ЧТ','" + j + "');";
+                        db.ExecuteNonQuery("testir.db", setTime);
+                        
+                    }
+                    for (int j = 1; j < 6; j++)
+                    {
+                        Templates.Clear();
+                        string setTime = "INSERT  into template(week_day, number_couple) VALUES ('ПТ','" + j + "');";
+                        db.ExecuteNonQuery("testir.db", setTime);
+                        
+                    }
+
+                
+            }
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            FirstLoadOnly();
             dataGridView1.Enabled = false;
             dataGridView2.Enabled = false;
             dataGridView3.Enabled = false;
@@ -73,96 +105,100 @@ namespace Zurnal
                 case "Friday": { dataGridView5.Enabled = true; break; }
                 default: Weekend(); break;
             }
-            
-
-            string s = @"SELECT * from template where week_day='ПН';";
-            db.Execute<Template>("testir.db", s, ref Templates);
-            for (int i = 0; i < 5; i++)
-            {
-
-
-                string couple_name_and_group = /*Convert.ToString(Templates[i].name_gr) +*/ " " + Convert.ToString(Templates[i].name_couple);
-
-                if (couple_name_and_group == " ")
-                {
-                    dataGridView1.Rows.Add(" Вікно");
-                }
-                else
-                {
-                    dataGridView1.Rows.Add(couple_name_and_group);
-                }
-
-            }
-
             Templates.Clear();
-
-            s = @"SELECT * from template where week_day='ВТ';";
-            db.Execute<Template>("testir.db", s, ref Templates);
-            for (int i = 0; i < 5; i++)
+            string n = @"SELECT * from template;";
+            db.Execute<Template>("testir.db", n, ref Templates);
+            if (Templates.Count != 0)
             {
-                string couple_name_and_group = /*Convert.ToString(Templates[i].name_gr) +*/ " " + Convert.ToString(Templates[i].name_couple);
+                string s = @"SELECT * from template where week_day='ПН';";
+                db.Execute<Template>("testir.db", s, ref Templates);
+                for (int i = 0; i < 5; i++)
+                {
 
-                if (couple_name_and_group == " ")
-                {
-                    dataGridView2.Rows.Add(" Вікно");
+
+                    string couple_name_and_group = Convert.ToString(Templates[i].name_gr) + " " + Convert.ToString(Templates[i].name_couple);
+
+                    if (couple_name_and_group == " ")
+                    {
+                        dataGridView1.Rows.Add(" Вікно");
+                    }
+                    else
+                    {
+                        dataGridView1.Rows.Add(couple_name_and_group);
+                    }
+
                 }
-                else
+
+                Templates.Clear();
+
+                s = @"SELECT * from template where week_day='ВТ';";
+                db.Execute<Template>("testir.db", s, ref Templates);
+                for (int i = 0; i < 5; i++)
                 {
-                    dataGridView2.Rows.Add(couple_name_and_group);
+                    string couple_name_and_group = Convert.ToString(Templates[i].name_gr) + " " + Convert.ToString(Templates[i].name_couple);
+
+                    if (couple_name_and_group == " ")
+                    {
+                        dataGridView2.Rows.Add(" Вікно");
+                    }
+                    else
+                    {
+                        dataGridView2.Rows.Add(couple_name_and_group);
+                    }
                 }
+                Templates.Clear();
+
+                s = @"SELECT * from template where week_day='СР';";
+                db.Execute<Template>("testir.db", s, ref Templates);
+                for (int i = 0; i < 5; i++)
+                {
+                    string couple_name_and_group = Convert.ToString(Templates[i].name_gr) + " " + Convert.ToString(Templates[i].name_couple);
+
+                    if (couple_name_and_group == " ")
+                    {
+                        dataGridView3.Rows.Add(" Вікно");
+                    }
+                    else
+                    {
+                        dataGridView3.Rows.Add(couple_name_and_group);
+                    }
+                }
+                Templates.Clear();
+
+                s = @"SELECT * from template where week_day='ЧТ';";
+                db.Execute<Template>("testir.db", s, ref Templates);
+                for (int i = 0; i < 5; i++)
+                {
+                    string couple_name_and_group = Convert.ToString(Templates[i].name_gr) + " " + Convert.ToString(Templates[i].name_couple);
+
+                    if (couple_name_and_group == " ")
+                    {
+                        dataGridView4.Rows.Add(" Вікно");
+                    }
+                    else
+                    {
+                        dataGridView4.Rows.Add(couple_name_and_group);
+                    }
+                }
+                Templates.Clear();
+
+                s = @"SELECT * from template where week_day='ПТ';";
+                db.Execute<Template>("testir.db", s, ref Templates);
+                for (int i = 0; i < 5; i++)
+                {
+                    string couple_name_and_group = Convert.ToString(Templates[i].name_gr) + " " + Convert.ToString(Templates[i].name_couple);
+
+                    if (couple_name_and_group == " ")
+                    {
+                        dataGridView5.Rows.Add(" Вікно");
+                    }
+                    else
+                    {
+                        dataGridView5.Rows.Add(couple_name_and_group);
+                    }
+                }
+                Templates.Clear();
             }
-            Templates.Clear();
-
-            s = @"SELECT * from template where week_day='СР';";
-            db.Execute<Template>("testir.db", s, ref Templates);
-            for (int i = 0; i < 5; i++)
-            {
-                string couple_name_and_group = /*Convert.ToString(Templates[i].name_gr) +*/ " " + Convert.ToString(Templates[i].name_couple);
-
-                if (couple_name_and_group == " ")
-                {
-                    dataGridView3.Rows.Add(" Вікно");
-                }
-                else
-                {
-                    dataGridView3.Rows.Add(couple_name_and_group);
-                }
-            }
-            Templates.Clear();
-
-            s = @"SELECT * from template where week_day='ЧТ';";
-            db.Execute<Template>("testir.db", s, ref Templates);
-            for (int i = 0; i < 5; i++)
-            {
-                string couple_name_and_group = /*Convert.ToString(Templates[i].name_gr) +*/ " " + Convert.ToString(Templates[i].name_couple);
-
-                if (couple_name_and_group == " ")
-                {
-                    dataGridView4.Rows.Add(" Вікно");
-                }
-                else
-                {
-                    dataGridView4.Rows.Add(couple_name_and_group);
-                }
-            }
-            Templates.Clear();
-
-            s = @"SELECT * from template where week_day='ПТ';";
-            db.Execute<Template>("testir.db", s, ref Templates);
-            for (int i = 0; i < 5; i++)
-            {
-                string couple_name_and_group = /*Convert.ToString(Templates[i].name_gr) +*/ " " + Convert.ToString(Templates[i].name_couple);
-
-                if (couple_name_and_group == " ")
-                {
-                    dataGridView5.Rows.Add(" Вікно");
-                }
-                else
-                {
-                    dataGridView5.Rows.Add(couple_name_and_group);
-                }
-            }
-            Templates.Clear();
         }
 
         private void siguiruhToolStripMenuItem_Click(object sender, EventArgs e)
