@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,12 +27,27 @@ namespace Zurnal
 			e.Handled = true;
 		}
 
+	
 		private void Group_Load(object sender, EventArgs e)
 		{
 			string s = @"SELECT * FROM student GROUP BY name_gr;";
 			db.Execute<Student>("testir.db", s, ref Students);
+			if (cbGroup.Items.Count ==0)
+			{
+				textBox2.Enabled = false;
+				AddFIO.Enabled = false;
+			}
+			else
+			{
+				if (cbGroup.Items.Count != 0)
+				{
+					textBox2.Enabled = false;
+					AddFIO.Enabled = false;
+				}
+			}
 			for (int i = 0; i < Students.Count; i++)
 			{
+				
 				cbGroup.Items.Add(Students[i].name_gr);
 			}
 			if (Students.Count!=0)
@@ -39,6 +55,7 @@ namespace Zurnal
 				cbGroup.SelectedItem = Students[0].name_gr;
 			}
 			
+
 			Students.Clear();
 		}
 
@@ -85,24 +102,35 @@ namespace Zurnal
 
 		private void delGroup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			if (MessageBox.Show("Ви впевнені?", "Видалення групи", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+			try
 			{
-				string delG = "DELETE FROM student WHERE name_gr = '" + cbGroup.Text + "' ";
-				db.ExecuteNonQuery("testir.db", delG);
-				cbGroup.Items.Clear();
-				string s = @"SELECT * FROM student GROUP BY name_gr;";
-				db.Execute<Student>("testir.db", s, ref Students);
-				for (int i = 0; i < Students.Count; i++)
+				if (MessageBox.Show("Ви впевнені?", "Видалення групи", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
 				{
-					cbGroup.Items.Add(Students[i].name_gr);
+					
+					string delG = "DELETE FROM student WHERE name_gr = '" + cbGroup.Text + "' ";
+					db.ExecuteNonQuery("testir.db", delG);
+					cbGroup.Items.Clear();
+					string s = @"SELECT * FROM student GROUP BY name_gr;";
+					db.Execute<Student>("testir.db", s, ref Students);
+					for (int i = 0; i < Students.Count; i++)
+					{
+						cbGroup.Items.Add(Students[i].name_gr);
+					}
+					if (Students.Count != 0)
+					{
+						cbGroup.SelectedItem = Students[0].name_gr;
+					}
+					Students.Clear();
+					ShowDatagridview();
+					proverka();
 				}
-				if (Students.Count != 0)
-				{
-					cbGroup.SelectedItem = Students[0].name_gr;
-				}
-				Students.Clear();
-				ShowDatagridview();
 			}
+			catch (Exception )
+			{
+				MessageBox.Show("Что-то пошло не так");
+			}
+					
+			
 		}
 
 		private void delStud_Click(object sender, EventArgs e)
@@ -161,6 +189,7 @@ namespace Zurnal
 		{
 			if (textBox1.Text != "")
 			{
+				
 				string s = @"SELECT * FROM student WHERE name_gr='" + textBox1.Text + "';";
 				db.Execute<Student>("testir.db", s, ref Students);
 				if (Students.Count == 0)
@@ -178,10 +207,28 @@ namespace Zurnal
 			{
 				MessageBox.Show("Поле \"Група\" порожнє");
 			}
+			
 			textBox1.Text = "";
 			Students.Clear();
-		}
 
+			proverka();
+		}
+		public void proverka()
+		{
+			if (cbGroup.Items.Count == 0)
+			{
+				textBox2.Enabled = false;
+				AddFIO.Enabled = false;
+			}
+			else
+			{
+				if (cbGroup.Items.Count != 0)
+				{
+					textBox2.Enabled = true;
+					AddFIO.Enabled = true;
+				}
+			}
+		}
 		private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
 		{
 			ChangeStud CS = new ChangeStud();
@@ -192,5 +239,14 @@ namespace Zurnal
 
 		}
 
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+
+		private void delStud_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			proverka();
+		}
 	}
 }

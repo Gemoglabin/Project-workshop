@@ -168,6 +168,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(485, 437);
             this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // Column1
@@ -255,6 +256,7 @@
             this.delStud.TabIndex = 10;
             this.delStud.TabStop = true;
             this.delStud.Text = "Видалити обраного студента";
+            this.delStud.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.delStud_LinkClicked);
             this.delStud.Click += new System.EventHandler(this.delStud_Click);
             // 
             // groupBox2
