@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Word;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -91,6 +93,8 @@ namespace Zurnal
             dataGridView3.Enabled = false;
             dataGridView4.Enabled = false;
             dataGridView5.Enabled = false;
+
+           
 
             DateTime date1 = new DateTime();
             date1 = DateTime.Today;
@@ -210,7 +214,7 @@ namespace Zurnal
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
@@ -302,35 +306,7 @@ namespace Zurnal
             garant.Show();
         }
 
-        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-		private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-		{
-
-		}
-
-		private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-
-		}
-
-		private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-
-		}
+      
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -339,9 +315,23 @@ namespace Zurnal
             garant.Show();
         }
 
-		private void label1_Click(object sender, EventArgs e)
-		{
 
-		}
-	}
+
+        private void експортуватиToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+            folderBrowserDialog.ShowDialog();
+            MessageBox.Show(folderBrowserDialog.SelectedPath.ToString());
+        }
+
+        private void імпортуватиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    }
 }

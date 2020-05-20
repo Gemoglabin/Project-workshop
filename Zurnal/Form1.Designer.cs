@@ -54,12 +54,15 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.jafhefuaegToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zdcjhdsguygsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.експортуватиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.імпортуватиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -116,7 +119,6 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(143, 180);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // Mon
@@ -214,7 +216,6 @@
             this.dataGridView3.RowHeadersVisible = false;
             this.dataGridView3.Size = new System.Drawing.Size(143, 180);
             this.dataGridView3.TabIndex = 3;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             this.dataGridView3.DoubleClick += new System.EventHandler(this.dataGridView3_DoubleClick);
             // 
             // dataGridViewTextBoxColumn2
@@ -333,6 +334,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jafhefuaegToolStripMenuItem,
             this.zdcjhdsguygsToolStripMenuItem,
+            this.експортуватиToolStripMenuItem,
+            this.імпортуватиToolStripMenuItem,
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -353,6 +356,20 @@
             this.zdcjhdsguygsToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.zdcjhdsguygsToolStripMenuItem.Text = "Група";
             this.zdcjhdsguygsToolStripMenuItem.Click += new System.EventHandler(this.zdcjhdsguygsToolStripMenuItem_Click);
+            // 
+            // експортуватиToolStripMenuItem
+            // 
+            this.експортуватиToolStripMenuItem.Name = "експортуватиToolStripMenuItem";
+            this.експортуватиToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.експортуватиToolStripMenuItem.Text = "експортувати БД";
+            this.експортуватиToolStripMenuItem.Click += new System.EventHandler(this.експортуватиToolStripMenuItem_Click_1);
+            // 
+            // імпортуватиToolStripMenuItem
+            // 
+            this.імпортуватиToolStripMenuItem.Name = "імпортуватиToolStripMenuItem";
+            this.імпортуватиToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.імпортуватиToolStripMenuItem.Text = "імпортувати БД";
+            this.імпортуватиToolStripMenuItem.Click += new System.EventHandler(this.імпортуватиToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
@@ -410,7 +427,6 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "СЬОГОДНІ ВИХІДНИЙ, ТОМУ ФУНКЦІОНАЛ ПРОГРАМИ ОБМЕЖЕНИЙ";
             this.label1.Visible = false;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -483,6 +499,9 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
-	}
+        private System.Windows.Forms.ToolStripMenuItem експортуватиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem імпортуватиToolStripMenuItem;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+    }
 }
 

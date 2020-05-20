@@ -15,7 +15,7 @@ namespace Zurnal
 		public Attendance()
 		{
 			InitializeComponent();
-		}
+		;}
 		
 		public List<Student> Students = new List<Student>();
 		public List<Template> Templates = new List<Template>();
@@ -32,7 +32,9 @@ namespace Zurnal
 			for (int i = 0; i < (dataGridView1.RowCount); i++)
 			{
 				dataGridView1.Rows[i].Cells[1].Value = 0;
+				dataGridView1.Rows[i].Cells[2].Value = "Не відома";
 			}
+			
 		}
 
 		private void Attendance_Load(object sender, EventArgs e)
@@ -47,7 +49,7 @@ namespace Zurnal
 			//for (int j = 0; j < 3; j++)
 			//{
 			//	Column2.Items.Add(j);
-			//}
+			//;}
 
 			DateTime date1 = new DateTime();
 			date1 = DateTime.Today;
@@ -59,6 +61,8 @@ namespace Zurnal
 		private void button1_Click(object sender, EventArgs e)
 		{
 			Save_Attend();
+			
+			
 		}
 
 		string studentID;
@@ -84,15 +88,18 @@ namespace Zurnal
 				}
 				for (int i = 0; i < (dataGridView1.RowCount); i++)
 				{
-					string s = @"SELECT * FROM student WHERE fio = '" + Convert.ToString(dataGridView1.Rows[i].Cells[0].Value) + "'";
+					string reason = "";
+					   string s = @"SELECT * FROM student WHERE fio = '" + Convert.ToString(dataGridView1.Rows[i].Cells[0].Value) + "'";
 					db.Execute<Student>("testir.db", s, ref Students);
 					for (int j = 0; j < Students.Count; j++)
 					{
 						studentID = Convert.ToString(Students[j].id_stud);
 					}
 					string mark = Convert.ToString(dataGridView1.Rows[i].Cells[1].Value);
-					if (mark == "") { mark = "0"; }
-					string save = "INSERT INTO visit(id_stud, id_time, mark) values('" + studentID + "', '" + getTime + "', '" + mark + "')";
+					if (dataGridView1.Rows[i].Cells[1].Value.ToString() == "0")  
+						 reason = "Не відома"; 
+					if (mark == "") { mark = "0"; ;}
+					string save = "INSERT INTO visit(id_stud, id_time, mark,reason) values('" + studentID + "', '" + getTime + "', '" + mark + "', '" + reason + "')";
 					db.ExecuteNonQuery("testir.db", save);
 					Students.Clear();
 				}
@@ -103,16 +110,21 @@ namespace Zurnal
 				{
 					for (int i = 0; i < (dataGridView1.RowCount); i++)
 					{
+						string reason = "";
 						string s = @"SELECT * FROM student WHERE fio = '" + Convert.ToString(dataGridView1.Rows[i].Cells[0].Value) + "'";
 						db.Execute<Student>("testir.db", s, ref Students);
 						for (int j = 0; j < Students.Count; j++)
 						{
 							studentID = Convert.ToString(Students[j].id_stud);
-						}
+						;}
 						string mark = Convert.ToString(dataGridView1.Rows[i].Cells[1].Value);
-						if (mark == "") { mark = "0"; }
+						if (mark == "") { mark = "0"; ;}
+						if (dataGridView1.Rows[i].Cells[1].Value.ToString() == "0")
+							reason = "Не відома";
 						string save = "UPDATE visit SET mark = '" + mark + "' WHERE id_time = '" + timeID + "' AND id_stud = '" + studentID + "'";
 						db.ExecuteNonQuery("testir.db", save);
+						string save1 = "UPDATE visit SET reason = '" + reason + "' WHERE id_time = '" + timeID + "' AND id_stud = '" + studentID + "'";
+						db.ExecuteNonQuery("testir.db", save1);
 						Students.Clear();
 					}
 					MessageBox.Show("Збережено", "", MessageBoxButtons.OK);
@@ -127,7 +139,8 @@ namespace Zurnal
 			boun.Show();
 		}
 
-		private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+	
+		private void dataGridView1_DataError_1(object sender, DataGridViewDataErrorEventArgs e)
 		{
 
 		}
