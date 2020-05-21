@@ -1,4 +1,4 @@
-﻿using Microsoft.Office.Interop.Word;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +8,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Office.Interop.Word;
 using System.Windows.Forms;
+using System.IO;
+using System.Security.Principal;
+using System.Text.RegularExpressions;
 
 namespace Zurnal
 {
@@ -17,6 +21,7 @@ namespace Zurnal
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         public List<Template> Templates = new List<Template>();
@@ -316,22 +321,59 @@ namespace Zurnal
         }
 
 
-
-        private void експортуватиToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
-            folderBrowserDialog.ShowDialog();
-            MessageBox.Show(folderBrowserDialog.SelectedPath.ToString());
-        }
-
-        private void імпортуватиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+        
+       
+      
 
         private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+
+        private void імпортуватиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Файлы db (*.db) |  *.db";
+                openFileDialog.Title = "Імпортувати";
+
+                openFileDialog.ShowDialog();
+                string pathStart = openFileDialog.FileName.ToString(); // путь откуда берем файл            
+                string PathExeFile = (Convert.ToString(Environment.CurrentDirectory) + "\\tester.db");  //путь где зранится exe файл 
+                DirectoryInfo directoryInfo = new DirectoryInfo(PathExeFile);
+                File.Copy(pathStart.ToString(), PathExeFile.ToString(), true);
+                MessageBox.Show("База данных сохранена на рабочий стол,если нет то звоните по номеру 666");
+            }
+            catch { }
+
+            
+
+        }
+
+        private void експортуватиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Файлы db (*.db) |  *.db";
+                openFileDialog.Title = "Експортувати";
+                string pathStart = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\testir.db"; // путь куда кидать *рабочий стол
+               
+                openFileDialog.ShowDialog();
+                string FileName = openFileDialog.FileName; //название файла 
+                string path = openFileDialog.FileName.ToString();//     путь откуда брать
+                DirectoryInfo directoryInfo = new DirectoryInfo(path);
+                
+                File.Copy(directoryInfo.ToString(), pathStart.ToString(), true);
+                MessageBox.Show("База данных сохранена на рабочий стол,если нет то звоните по номеру 666");
+            }
+            catch
+            { }
+
+          
         }
     }
 }

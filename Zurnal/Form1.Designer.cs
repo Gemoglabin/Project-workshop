@@ -62,7 +62,8 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -362,7 +363,7 @@
             this.експортуватиToolStripMenuItem.Name = "експортуватиToolStripMenuItem";
             this.експортуватиToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
             this.експортуватиToolStripMenuItem.Text = "експортувати БД";
-            this.експортуватиToolStripMenuItem.Click += new System.EventHandler(this.експортуватиToolStripMenuItem_Click_1);
+            this.експортуватиToolStripMenuItem.Click += new System.EventHandler(this.експортуватиToolStripMenuItem_Click);
             // 
             // імпортуватиToolStripMenuItem
             // 
@@ -439,6 +440,10 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "ОБЕРІТЬ ПАРУ";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -501,7 +506,8 @@
 		private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem експортуватиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem імпортуватиToolStripMenuItem;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

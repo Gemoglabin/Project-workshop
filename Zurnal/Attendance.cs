@@ -88,7 +88,7 @@ namespace Zurnal
 				}
 				for (int i = 0; i < (dataGridView1.RowCount); i++)
 				{
-					string reason = "";
+					string reason = dataGridView1.Rows[i].Cells[2].Value.ToString();
 					   string s = @"SELECT * FROM student WHERE fio = '" + Convert.ToString(dataGridView1.Rows[i].Cells[0].Value) + "'";
 					db.Execute<Student>("testir.db", s, ref Students);
 					for (int j = 0; j < Students.Count; j++)
@@ -110,7 +110,7 @@ namespace Zurnal
 				{
 					for (int i = 0; i < (dataGridView1.RowCount); i++)
 					{
-						string reason = "";
+						string reason = dataGridView1.Rows[i].Cells[2].Value.ToString();
 						string s = @"SELECT * FROM student WHERE fio = '" + Convert.ToString(dataGridView1.Rows[i].Cells[0].Value) + "'";
 						db.Execute<Student>("testir.db", s, ref Students);
 						for (int j = 0; j < Students.Count; j++)
