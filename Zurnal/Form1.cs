@@ -99,13 +99,15 @@ namespace Zurnal
             dataGridView3.Enabled = false;
             dataGridView4.Enabled = false;
             dataGridView5.Enabled = false;
-
-           
-
-           
+            LoadDB();
         }
         public void LoadDB()
         {
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
+            dataGridView3.Rows.Clear();
+            dataGridView4.Rows.Clear();
+            dataGridView5.Rows.Clear();
             DateTime date1 = new DateTime();
             date1 = DateTime.Today;
             string dayofweek = date1.DayOfWeek.ToString();
@@ -349,7 +351,7 @@ namespace Zurnal
                 string PathExeFile = (Convert.ToString(Environment.CurrentDirectory) + "\\testir.db");  //путь где зранится exe файл 
                 DirectoryInfo directoryInfo = new DirectoryInfo(PathExeFile);
                 File.Copy(pathStart.ToString(), PathExeFile.ToString(), true);
-                MessageBox.Show("База данных сохранена на рабочий стол,если нет то звоните по номеру 666");
+                MessageBox.Show("Готово");
                 LoadDB();
             }
             catch { }
@@ -385,7 +387,7 @@ namespace Zurnal
                 string PathExeFile = (Convert.ToString(Environment.CurrentDirectory) + "\\testir.db");  //путь где зранится exe файл и DB
                 DirectoryInfo directoryInfo = new DirectoryInfo(PathExeFile);
                 File.Copy(directoryInfo.ToString(), pathWhere.ToString(), true);
-                MessageBox.Show("База данных сохранена на рабочий стол,если нет то звоните по номеру 666");
+                MessageBox.Show("готово");
 
 
             }
