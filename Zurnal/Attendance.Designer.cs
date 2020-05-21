@@ -149,9 +149,9 @@
             this.label4.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label4.Location = new System.Drawing.Point(35, 43);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(325, 13);
+            this.label4.Size = new System.Drawing.Size(367, 13);
             this.label4.TabIndex = 15;
-            this.label4.Text = "_____________________________________________________";
+            this.label4.Text = "____________________________________________________________";
             // 
             // label3
             // 

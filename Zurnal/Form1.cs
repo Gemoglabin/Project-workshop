@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Security.Principal;
 using System.Text.RegularExpressions;
+using Microsoft.Win32.SafeHandles;
 
 namespace Zurnal
 {
@@ -101,6 +102,10 @@ namespace Zurnal
 
            
 
+           
+        }
+        public void LoadDB()
+        {
             DateTime date1 = new DateTime();
             date1 = DateTime.Today;
             string dayofweek = date1.DayOfWeek.ToString();
@@ -209,7 +214,6 @@ namespace Zurnal
                 Templates.Clear();
             }
         }
-
         private void siguiruhToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -342,10 +346,11 @@ namespace Zurnal
 
                 openFileDialog.ShowDialog();
                 string pathStart = openFileDialog.FileName.ToString(); // путь откуда берем файл            
-                string PathExeFile = (Convert.ToString(Environment.CurrentDirectory) + "\\tester.db");  //путь где зранится exe файл 
+                string PathExeFile = (Convert.ToString(Environment.CurrentDirectory) + "\\testir.db");  //путь где зранится exe файл 
                 DirectoryInfo directoryInfo = new DirectoryInfo(PathExeFile);
                 File.Copy(pathStart.ToString(), PathExeFile.ToString(), true);
                 MessageBox.Show("База данных сохранена на рабочий стол,если нет то звоните по номеру 666");
+                LoadDB();
             }
             catch { }
 
@@ -357,18 +362,32 @@ namespace Zurnal
         {
             try
             {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.Filter = "Файлы db (*.db) |  *.db";
-                openFileDialog.Title = "Експортувати";
-                string pathStart = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\testir.db"; // путь куда кидать *рабочий стол
-               
-                openFileDialog.ShowDialog();
-                string FileName = openFileDialog.FileName; //название файла 
-                string path = openFileDialog.FileName.ToString();//     путь откуда брать
-                DirectoryInfo directoryInfo = new DirectoryInfo(path);
-                
-                File.Copy(directoryInfo.ToString(), pathStart.ToString(), true);
+                #region myregion
+                //OpenFileDialog openFileDialog = new OpenFileDialog();
+                //openFileDialog.Filter = "Файлы db (*.db) |  *.db";
+                //openFileDialog.Title = "Експортувати";
+                //string pathStart = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\testir.db"; // путь куда кидать *рабочий стол
+
+                //openFileDialog.ShowDialog();
+                //string FileName = openFileDialog.FileName; //название файла 
+                //string path = openFileDialog.FileName.ToString();//     путь откуда брать
+                //DirectoryInfo directoryInfo = new DirectoryInfo(path);
+
+                //File.Copy(directoryInfo.ToString(), pathStart.ToString(), true);
+                //MessageBox.Show("База данных сохранена на рабочий стол,если нет то звоните по номеру 666");
+                #endregion
+
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Файлы db (*.db) | *.db";
+                saveFileDialog.Title = "Експортувати";
+                saveFileDialog.ShowDialog();
+                string pathWhere = saveFileDialog.FileName; //куда сохранять
+                string PathExeFile = (Convert.ToString(Environment.CurrentDirectory) + "\\testir.db");  //путь где зранится exe файл и DB
+                DirectoryInfo directoryInfo = new DirectoryInfo(PathExeFile);
+                File.Copy(directoryInfo.ToString(), pathWhere.ToString(), true);
                 MessageBox.Show("База данных сохранена на рабочий стол,если нет то звоните по номеру 666");
+
+
             }
             catch
             { }

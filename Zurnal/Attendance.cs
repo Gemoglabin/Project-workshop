@@ -56,6 +56,7 @@ namespace Zurnal
 			currentDay.Text = Convert.ToString(date1.ToString("yyyy-MM-dd"));
 
 			DataGridComboboxSetDefault();
+			label3.Text += (" групи " +name_gr);
 		}
 
 		private void button1_Click(object sender, EventArgs e)
