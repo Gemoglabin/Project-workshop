@@ -15,7 +15,7 @@ namespace Zurnal
 		public Attendance()
 		{
 			InitializeComponent();
-		;}
+		}
 		
 		public List<Student> Students = new List<Student>();
 		public List<Template> Templates = new List<Template>();
@@ -98,7 +98,7 @@ namespace Zurnal
 					}
 					string mark = Convert.ToString(dataGridView1.Rows[i].Cells[1].Value);
 					if (dataGridView1.Rows[i].Cells[1].Value.ToString() == "0")  
-						 reason = "Не відома"; 
+						 reason = "Поважна"; 
 					if (mark == "") { mark = "0"; ;}
 					string save = "INSERT INTO visit(id_stud, id_time, mark,reason) values('" + studentID + "', '" + getTime + "', '" + mark + "', '" + reason + "')";
 					db.ExecuteNonQuery("testir.db", save);
@@ -119,9 +119,8 @@ namespace Zurnal
 							studentID = Convert.ToString(Students[j].id_stud);
 						;}
 						string mark = Convert.ToString(dataGridView1.Rows[i].Cells[1].Value);
-						if (mark == "") { mark = "0"; ;}
 						if (dataGridView1.Rows[i].Cells[1].Value.ToString() == "0")
-							reason = "Не відома";
+							reason = "Поважна";
 						string save = "UPDATE visit SET mark = '" + mark + "' WHERE id_time = '" + timeID + "' AND id_stud = '" + studentID + "'";
 						db.ExecuteNonQuery("testir.db", save);
 						string save1 = "UPDATE visit SET reason = '" + reason + "' WHERE id_time = '" + timeID + "' AND id_stud = '" + studentID + "'";
@@ -142,6 +141,11 @@ namespace Zurnal
 
 	
 		private void dataGridView1_DataError_1(object sender, DataGridViewDataErrorEventArgs e)
+		{
+
+		}
+
+		private void label1_Click(object sender, EventArgs e)
 		{
 
 		}

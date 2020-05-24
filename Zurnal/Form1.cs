@@ -37,10 +37,7 @@ namespace Zurnal
 
         }
 
-        //private void testWrite()
-        //{
-        //    label5.Text = Convert.ToString(Convert.ToInt32(label5.Text) + 1);
-        //}
+        
         private void FirstLoadOnly()
         {
             string s = @"SELECT * from template;";
@@ -364,21 +361,6 @@ namespace Zurnal
         {
             try
             {
-                #region myregion
-                //OpenFileDialog openFileDialog = new OpenFileDialog();
-                //openFileDialog.Filter = "Файлы db (*.db) |  *.db";
-                //openFileDialog.Title = "Експортувати";
-                //string pathStart = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\testir.db"; // путь куда кидать *рабочий стол
-
-                //openFileDialog.ShowDialog();
-                //string FileName = openFileDialog.FileName; //название файла 
-                //string path = openFileDialog.FileName.ToString();//     путь откуда брать
-                //DirectoryInfo directoryInfo = new DirectoryInfo(path);
-
-                //File.Copy(directoryInfo.ToString(), pathStart.ToString(), true);
-                //MessageBox.Show("База данных сохранена на рабочий стол,если нет то звоните по номеру 666");
-                #endregion
-
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "Файлы db (*.db) | *.db";
                 saveFileDialog.Title = "Експортувати";
@@ -395,6 +377,13 @@ namespace Zurnal
             { }
 
           
+        }
+
+        private void редагуванняПарToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegСouple regСouple = new RegСouple();
+            regСouple.ShowDialog();
         }
     }
 }

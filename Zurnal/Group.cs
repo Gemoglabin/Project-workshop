@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Office.Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,19 +33,7 @@ namespace Zurnal
 		{
 			string s = @"SELECT * FROM student GROUP BY name_gr;";
 			db.Execute<Student>("testir.db", s, ref Students);
-			if (cbGroup.Items.Count ==0)
-			{
-				textBox2.Enabled = false;
-				AddFIO.Enabled = false;
-			}
-			else
-			{
-				if (cbGroup.Items.Count != 0)
-				{
-					textBox2.Enabled = false;
-					AddFIO.Enabled = false;
-				}
-			}
+			
 			for (int i = 0; i < Students.Count; i++)
 			{
 				
@@ -54,7 +43,20 @@ namespace Zurnal
 			{
 				cbGroup.SelectedItem = Students[0].name_gr;
 			}
-			
+
+			if (cbGroup.Items.Count == 0)
+			{
+				textBox2.Enabled = false;
+				AddFIO.Enabled = false;
+			}
+			else
+			{
+				if (cbGroup.Items.Count != 0)
+				{
+					textBox2.Enabled = true;
+					AddFIO.Enabled = true;
+				}
+			}
 
 			Students.Clear();
 		}
