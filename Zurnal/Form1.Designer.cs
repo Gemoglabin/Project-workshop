@@ -56,6 +56,7 @@
             this.zdcjhdsguygsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.експортуватиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.імпортуватиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.редагуванняПарToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.редагуванняПарToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -273,6 +273,7 @@
             this.dataGridView4.RowHeadersVisible = false;
             this.dataGridView4.Size = new System.Drawing.Size(143, 180);
             this.dataGridView4.TabIndex = 4;
+            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             this.dataGridView4.DoubleClick += new System.EventHandler(this.dataGridView4_DoubleClick);
             // 
             // dataGridViewTextBoxColumn3
@@ -374,6 +375,13 @@
             this.імпортуватиToolStripMenuItem.Text = "імпортувати БД";
             this.імпортуватиToolStripMenuItem.Click += new System.EventHandler(this.імпортуватиToolStripMenuItem_Click);
             // 
+            // редагуванняПарToolStripMenuItem
+            // 
+            this.редагуванняПарToolStripMenuItem.Name = "редагуванняПарToolStripMenuItem";
+            this.редагуванняПарToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.редагуванняПарToolStripMenuItem.Text = "редагування пар";
+            this.редагуванняПарToolStripMenuItem.Click += new System.EventHandler(this.редагуванняПарToolStripMenuItem_Click);
+            // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
@@ -445,13 +453,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // редагуванняПарToolStripMenuItem
-            // 
-            this.редагуванняПарToolStripMenuItem.Name = "редагуванняПарToolStripMenuItem";
-            this.редагуванняПарToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
-            this.редагуванняПарToolStripMenuItem.Text = "редагування пар";
-            this.редагуванняПарToolStripMenuItem.Click += new System.EventHandler(this.редагуванняПарToolStripMenuItem_Click);
             // 
             // Form1
             // 

@@ -34,6 +34,7 @@ namespace Zurnal
             currentDay.Text = Convert.ToString(date1.ToString("yyyy-MM-dd"));
             dateTimePicker1.Value = Convert.ToDateTime(date1.ToString("yyyy-MM-dd"));
             dateTimePicker1.MaxDate = dateTimePicker1.Value;
+            comboBox2.SelectedItem = comboBox2.Items[0].ToString();
 
             LoadCombobox();
         }

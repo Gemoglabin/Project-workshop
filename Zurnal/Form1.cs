@@ -123,6 +123,7 @@ namespace Zurnal
             db.Execute<Template>("testir.db", n, ref Templates);
             if (Templates.Count != 0)
             {
+                Templates.Clear();
                 string s = @"SELECT * from template where week_day='ПН';";
                 db.Execute<Template>("testir.db", s, ref Templates);
                 for (int i = 0; i < 5; i++)
@@ -384,6 +385,11 @@ namespace Zurnal
             this.Hide();
             RegСouple regСouple = new RegСouple();
             regСouple.ShowDialog();
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

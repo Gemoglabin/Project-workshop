@@ -26,6 +26,7 @@ namespace Zurnal
         public List<Report> Reports = new List<Report>();
         public List<Student> Students = new List<Student>();
 
+        public List<ZvitExcelV2> ZvitExcelV2s = new List<ZvitExcelV2>();
         ClassDataBase db = new ClassDataBase();
 
         private void InputGroup()
@@ -212,7 +213,7 @@ namespace Zurnal
             ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
             ExcelWorkSheet = (Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
             ExcelWorkSheet.Cells[1, 7] = "";
-
+            
             for (int i =1; i < dataGridView1.Columns.Count + 1; i++)
             {
                 ExcelWorkSheet.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
@@ -336,8 +337,66 @@ namespace Zurnal
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
+            if (radioButton4.Checked == true) { button4.Enabled = true; }
+            else { button4.Enabled = false; }
+            
             dateTimePicker1.Enabled = true;
             dateTimePicker2.Enabled = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ZvitExcelV2s.Clear();
+            Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+            Excel.Workbook ExcelWorkBook;
+            Excel.Worksheet ExcelWorkSheet;
+            ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
+            ExcelWorkSheet = (Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
+
+            #region createExcelFIO
+            ExcelWorkSheet.Range[ExcelWorkSheet.Cells[1,1], ExcelWorkSheet.Cells[3, 3]].Merge();
+            ExcelWorkSheet.Cells[3, 3] = "ФИО";           
+            string q = @"SELECT s.id_stud, s.fio, v.mark, t.number_couple, t.name_couple, t.date, v.id_time from timetable t, student s, visit v where v.id_stud=s.id_stud and v.id_time=t.id_time and t.name_gr='" + cmbgroup.Text.ToString() + "' and  t.date BETWEEN '" + dateTimePicker1.Text.ToString() + "' and '" + dateTimePicker2.Text.ToString() + "'";
+            db.Execute<ZvitExcelV2>("testir.db", q, ref ZvitExcelV2s);
+            for (int i = 0; i < ZvitExcelV2s.Count; i++)
+                for (int j = 0; j < 1; j++)
+                    ExcelWorkSheet.Cells[i + 3, j + 1] = ZvitExcelV2s[i].fio;
+            #endregion
+
+            //#region CreateExcelDATE
+            //ExcelWorkSheet.Range[ExcelWorkSheet.Cells[1, 4], ExcelWorkSheet.Cells[1, 5]].Merge();
+            //ExcelWorkSheet.Cells[1, 4] = ZvitExcelV2s[1].date;
+            //for (int i = 0; i < 2; i++)
+            //{
+
+
+            //    ExcelWorkSheet.Range[ExcelWorkSheet.Cells[1, i + 3], ExcelWorkSheet.Cells[1, 5]].Merge();
+            //    ExcelWorkSheet.Cells[1, i + 3] = ZvitExcelV2s[i].date;
+            //    for (int j = 0; j < ZvitExcelV2s.Count; j++)
+            //    {
+            //        if (j == 0)
+            //        {
+            //            ExcelWorkSheet.Range[ExcelWorkSheet.Cells[1, i + 2], ExcelWorkSheet.Cells[1, 5]].Merge();
+            //            ExcelWorkSheet.Cells[1, i + 2] = ZvitExcelV2s[i].date;
+            //        }
+            //        else
+            //        {
+
+            //        }
+
+
+            //    }
+
+            //}
+
+
+            //#endregion
+
+
+            ExcelApp.Columns.AutoFit();
+
+            ExcelApp.Visible = true;
+            ExcelApp.Quit();
         }
     }
 }

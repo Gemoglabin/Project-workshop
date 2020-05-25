@@ -154,6 +154,7 @@
     <Compile Include="Zvit.Designer.cs">
       <DependentUpon>Zvit.cs</DependentUpon>
     </Compile>
+    <Compile Include="ZvitExcelV2.cs" />
     <EmbeddedResource Include="Attendance.resx">
       <DependentUpon>Attendance.cs</DependentUpon>
     </EmbeddedResource>

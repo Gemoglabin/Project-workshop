@@ -32,7 +32,7 @@ namespace Zurnal
 			for (int i = 0; i < (dataGridView1.RowCount); i++)
 			{
 				dataGridView1.Rows[i].Cells[1].Value = 0;
-				dataGridView1.Rows[i].Cells[2].Value = "Не відома";
+				dataGridView1.Rows[i].Cells[2].Value = "Не поважна";
 			}
 			
 		}

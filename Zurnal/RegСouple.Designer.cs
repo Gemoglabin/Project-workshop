@@ -270,8 +270,7 @@
             this.Column3.HeaderText = "Поважнiсть";
             this.Column3.Items.AddRange(new object[] {
             "Не поважна",
-            "Поважна",
-            ""});
+            "Поважна"});
             this.Column3.Name = "Column3";
             // 
             // RegСouple
